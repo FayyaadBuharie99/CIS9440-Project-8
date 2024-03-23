@@ -2,7 +2,7 @@
     # extract all county data (NY) and save as CSV files
 
 import os
-import psycopg2
+#import psycopg2
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
