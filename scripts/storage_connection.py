@@ -6,7 +6,8 @@ import requests
 from google.cloud import storage
 from io import StringIO
 
-# Functions
+
+# Google Cloud Storage Functions
 def gcs_upload_blob(bucket_name, blob_name, data):
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
@@ -14,6 +15,13 @@ def gcs_upload_blob(bucket_name, blob_name, data):
     blob.upload_from_string(data)
     print(f"Uploaded to Google Cloud Storage: {blob_name}")
 
+def gcs_download_blob(bucket_name, blob_name):
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
+    blob = bucket.blob(blob_name)
+    return blob.download_as_string()
+
+# Web API Code to get the data:
 def check_url(url, params=None):
     response = requests.get(url, params=params)
     if response.status_code == 200:
@@ -49,15 +57,9 @@ while True:
 # Convert the JSON data to a Pandas DataFrame
 df = pd.DataFrame(all_data)
 
-config_file_path = 'config/config.json'
-
-# Load the JSON configuration file
-with open(config_file_path, 'r') as config_file:
-    config = json.load(config_file)
-
-# Defining the name of the bucket and blob
+# Google Cloud Storage Configuration
 BUCKET_NAME = "housingproject_cis9440"
-blob_name = "car_crash.csv"
+blob_name = "greentaxi.csv"
 
 # Convert DataFrame to CSV
 output = StringIO()
@@ -68,4 +70,4 @@ output.close()
 # Upload the CSV data to Google Cloud Storage
 gcs_upload_blob(BUCKET_NAME, blob_name, data)
 
-print(f"Uploaded {blob_name} to Google Cloud Storage in bucket {BUCKET_NAME}")
+print(f"Uploaded {blob_name} to Google Cloud Storage in bucket {BUCKET_NAME}.")
