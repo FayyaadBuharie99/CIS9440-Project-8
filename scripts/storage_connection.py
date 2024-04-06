@@ -65,8 +65,8 @@ with open(config_file_path, 'r') as config_file:
 
 #definning the name of storgae, container, and blob
 CONNECTION_STRING_GOOGLECLOUD_STORAGE = config["connectionString"]
-CONTAINER_GOOGLECLOUD= 'carcrash'
-blob_name = "car_crash.csv"
+CONTAINER_GOOGLECLOUD= 'housedata'
+blob_name = "house.csv"
 
 #Convert Dataframe to csv
 output = StringIO()
