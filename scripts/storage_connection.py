@@ -64,8 +64,8 @@ with open(config_file_path, 'r') as config_file:
     config = json.load(config_file)
 
 #definning the name of storgae, container, and blob
-CONNECTION_STRING_AZURE_STORAGE = config["connectionString"]
-CONTAINER_AZURE = 'carcrash'
+CONNECTION_STRING_GOOGLECLOUD_STORAGE = config["connectionString"]
+CONTAINER_GOOGLECLOUD= 'carcrash'
 blob_name = "car_crash.csv"
 
 #Convert Dataframe to csv
@@ -75,12 +75,12 @@ data = output.getvalue()
 output.close()
 
 # Create the BlobServiceClient object
-blob_service_client = BlobServiceClient.from_connection_string(CONNECTION_STRING_AZURE_STORAGE)
+blob_service_client = BlobServiceClient.from_connection_string(CONNECTION_STRING_GOOGLECLOUD_STORAGE)
 
 # Get a blob client using the container name and blob name
-blob_client = blob_service_client.get_blob_client(container=CONTAINER_AZURE, blob=blob_name)
+blob_client = blob_service_client.get_blob_client(container=CONTAINER_GOOGLECLOUD, blob=blob_name)
 
 # Upload the CSV data
 blob_client.upload_blob(data, overwrite=True)
 
-print(f"Uploaded {blob_name} to Azure Blob Storage in container {CONTAINER_AZURE}")
+print(f"Uploaded {blob_name} to Azure Blob Storage in container {CONTAINER_GOOGLECLOUD}")
