@@ -1,27 +1,19 @@
-# import Librairies
+# import Libraries
 import pandas as pd
-import numpy as  np
+import numpy as np
 import json
 import requests
-import boto3
-from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+from google.cloud import storage
 from io import StringIO
 
 # Functions
-def azure_upload_blob(connect_str, container_name, blob_name, data):
-    blob_service_client = BlobServiceClient.from_connection_string(connect_str)
-    blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
-    blob_client.upload_blob(data, overwrite=True)
-    print(f"Uploaded to Azure Blob: {blob_name}")
+def gcs_upload_blob(bucket_name, blob_name, data):
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
+    blob = bucket.blob(blob_name)
+    blob.upload_from_string(data)
+    print(f"Uploaded to Google Cloud Storage: {blob_name}")
 
-def azure_download_blob(connect_str, container_name, blob_name):
-    blob_service_client = BlobServiceClient.from_connection_string(connect_str)
-    blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
-    download_stream = blob_client.download_blob()
-    return download_stream.readall()
-
-
-#Web API Code to get the data:
 def check_url(url, params=None):
     response = requests.get(url, params=params)
     if response.status_code == 200:
@@ -59,28 +51,21 @@ df = pd.DataFrame(all_data)
 
 config_file_path = 'config/config.json'
 
-#load the JSON configuration file
+# Load the JSON configuration file
 with open(config_file_path, 'r') as config_file:
     config = json.load(config_file)
 
-#definning the name of storgae, container, and blob
-CONNECTION_STRING_GOOGLECLOUD_STORAGE = config["connectionString"]
-CONTAINER_GOOGLECLOUD= 'housedata'
-blob_name = "house.csv"
+# Defining the name of the bucket and blob
+BUCKET_NAME = "housingproject_cis9440"
+blob_name = "car_crash.csv"
 
-#Convert Dataframe to csv
+# Convert DataFrame to CSV
 output = StringIO()
 df.to_csv(output, index=False)
 data = output.getvalue()
 output.close()
 
-# Create the BlobServiceClient object
-blob_service_client = BlobServiceClient.from_connection_string(CONNECTION_STRING_GOOGLECLOUD_STORAGE)
+# Upload the CSV data to Google Cloud Storage
+gcs_upload_blob(BUCKET_NAME, blob_name, data)
 
-# Get a blob client using the container name and blob name
-blob_client = blob_service_client.get_blob_client(container=CONTAINER_GOOGLECLOUD, blob=blob_name)
-
-# Upload the CSV data
-blob_client.upload_blob(data, overwrite=True)
-
-print(f"Uploaded {blob_name} to Azure Blob Storage in container {CONTAINER_GOOGLECLOUD}")
+print(f"Uploaded {blob_name} to Google Cloud Storage in bucket {BUCKET_NAME}")
