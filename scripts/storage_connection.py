@@ -1,11 +1,12 @@
 # import Libraries
-import pandas as pd
-import numpy as np
-import json
-import requests
+import os
+import boto3
+from azure.storage.blob import BlobServiceClient
 from google.cloud import storage
-from io import StringIO
-
+import pandas as pd
+from io import BytesIO, StringIO
+import requests
+from bs4 import BeautifulSoup
 
 # Google Cloud Storage Functions
 def gcs_upload_blob(bucket_name, blob_name, data):
@@ -21,45 +22,15 @@ def gcs_download_blob(bucket_name, blob_name):
     blob = bucket.blob(blob_name)
     return blob.download_as_string()
 
-# Web API Code to get the data:
-def check_url(url, params=None):
-    response = requests.get(url, params=params)
-    if response.status_code == 200:
-        return response
-    else:
-        print("Bad connection")
-        return None
 
-url = 'https://data.cityofnewyork.us/resource/h9gi-nx95.json'
-
-# Set the limit per request
-limit_per_request = 2000
-
-# Initialize variables
-offset = 0
-all_data = []
-
-while True:
-    params = {'$limit': limit_per_request, '$offset': offset}
-    data = check_url(url, params)
-
-    if data:
-        current_data = data.json()
-        if not current_data:
-            break
-
-        all_data.extend(current_data)
-        offset += limit_per_request
-    else:
-        print("not working")
-        break
-
-# Convert the JSON data to a Pandas DataFrame
-df = pd.DataFrame(all_data)
+df = pd.read_csv("/Users/gabisanches/Desktop/CIS9440 - Data Warehouse/Final_Project/all_table3.csv", encoding="ISO-8859-1")
 
 # Google Cloud Storage Configuration
 BUCKET_NAME = "housingproject_cis9440"
-blob_name = "greentaxi.csv"
+blob_name = "MIT_typicalannualsalaries.csv"
+
+# Set the environment variable to the path of your service account key file
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/gabisanches/Desktop/CIS9440 - Data Warehouse/Final_Project/CIS9440-Project-8/scripts/liquid-evening-419521-f3bbe91c1085.json"
 
 # Convert DataFrame to CSV
 output = StringIO()
