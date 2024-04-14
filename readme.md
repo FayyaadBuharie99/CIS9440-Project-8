@@ -6,12 +6,12 @@
 
 2. Business Impact: Our goal is to help the user to make a decision of where to buy a new home, based on the cost of living, housing sale price, crime rate and school rating. Using a combination of these criterias, you will be able to locate your dream home in an area of your choosing. This will have a great impact on job seekers, new families, and even individuals who are keen on investing in to new properties in New York State
 
-3. Business Persona: 
+3. Business Persona: Our system is created to assist people who are considering to purchase a house in New York State. For this system, we are collecting and analyzing useful data to support the house buyers to compare all necessary living indexes in New York State. The actors of the system could include all house buyers, real estate companies, and investors as well as all the system developers.
 
 4. Data Sources:
     - MIT Living Wage (204 kb) 
     - NYC Housing Data (112 GB) (https://www.dolthub.com/repositories/dolthub/us-housing-prices-v2/data/main/sales)
-    - Crime Data 
+    - Crime Data (32KB)
     - School Ranking data 
 
 5. Methods:
