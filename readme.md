@@ -11,7 +11,7 @@
 4. Data Sources:
     - MIT Living Wage (204 kb) 
     - NYC Housing Data (112 GB) (https://www.dolthub.com/repositories/dolthub/us-housing-prices-v2/data/main/sales)
-    - Crime Data 
+    - Crime Data (32KB)
     - School Ranking data 
 
 5. Methods:
