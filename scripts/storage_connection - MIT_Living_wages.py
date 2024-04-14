@@ -1,4 +1,5 @@
 # import Libraries
+
 import os
 import boto3
 from azure.storage.blob import BlobServiceClient
@@ -7,6 +8,7 @@ import pandas as pd
 from io import BytesIO, StringIO
 import requests
 from bs4 import BeautifulSoup
+
 
 # Google Cloud Storage Functions
 def gcs_upload_blob(bucket_name, blob_name, data):
