@@ -9,10 +9,10 @@
 3. Business Persona: Our system is created to assist people who are considering to purchase a house in New York State. For this system, we are collecting and analyzing useful data to support the house buyers to compare all necessary living indexes in New York State. The actors of the system could include all house buyers, real estate companies, and investors as well as all the system developers.
 
 4. Data Sources:
-    - MIT Living Wage (204 kb) 
+    - MIT Living Wage (204 kb) (https://livingwage.mit.edu/counties/13151)
     - NYC Housing Data (112 GB) (https://www.dolthub.com/repositories/dolthub/us-housing-prices-v2/data/main/sales)
-    - Crime Data (32KB)
-    - School Ranking data 
+    - Crime Data (32KB) (https://www.mylocalcrime.com/?kbid=62750#40.732326%2C%20-73.25099)
+    - School Ranking Data (https://developer.schooldigger.com/)
 
 5. Methods:
 
