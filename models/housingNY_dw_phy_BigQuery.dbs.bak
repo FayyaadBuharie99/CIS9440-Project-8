@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="housingNY_dw_lgl" id="GoogleBigQuery-194b" database="GoogleBigQuery" >
+	<schema name="INSTANCE" catalogname="housingNY_dw_lgl" >
+		<table name="dim_building" >
+			<column name="building_id" type="int64" jt="4" mandatory="y" />
+			<column name="building_num_units" type="int64" jt="4" />
+			<column name="building_year_built" type="int64" jt="4" />
+			<column name="building_num_stories" type="int64" jt="4" />
+			<column name="building_num_beds" type="int64" jt="4" />
+			<column name="building_num_baths" type="int64" jt="4" />
+			<column name="building_num_sqft" type="int64" jt="4" />
+			<index name="pk_dim_building" unique="PRIMARY_KEY" >
+				<column name="building_id" />
+			</index>
+		</table>
+		<table name="dim_land" >
+			<column name="land_id" type="int64" jt="4" mandatory="y" />
+			<column name="land_type" type="string" length="255" jt="12" />
+			<index name="pk_dim_land" unique="PRIMARY_KEY" >
+				<column name="land_id" />
+			</index>
+		</table>
+		<table name="dim_location" >
+			<column name="location_id" type="int64" jt="4" mandatory="y" />
+			<column name="county" type="string" length="255" jt="12" />
+			<column name="zip_code" type="int64" jt="4" />
+			<column name="longitude" type="int64" jt="4" />
+			<column name="latitude" type="int64" jt="4" />
+			<column name="state" type="string" length="255" jt="12" />
+			<column name="city" type="string" length="255" jt="12" />
+			<column name="street_address" type="string" length="255" jt="12" />
+			<column name="township" type="string" length="255" jt="12" />
+			<column name="property_type" type="string" length="255" jt="12" />
+			<index name="pk_dim_location" unique="PRIMARY_KEY" >
+				<column name="location_id" />
+			</index>
+		</table>
+		<table name="dim_profession" >
+			<column name="profession_id" type="int64" jt="4" mandatory="y" />
+			<column name="profession_title" type="string" length="255" jt="12" />
+			<index name="pk_dim_profession" unique="PRIMARY_KEY" >
+				<column name="profession_id" />
+			</index>
+		</table>
+		<table name="dim_sale" >
+			<column name="sale_id" type="int64" jt="4" mandatory="y" />
+			<column name="proeprty_id" type="int64" jt="4" />
+			<index name="pk_dim_sale" unique="PRIMARY_KEY" >
+				<column name="sale_id" />
+			</index>
+		</table>
+		<table name="dim_school" >
+			<column name="school_id" type="int64" jt="4" mandatory="y" />
+			<column name="school_name" type="string" length="255" jt="12" />
+			<column name="is_private" type="string" length="100" jt="12" />
+			<column name="school_level" type="string" length="100" jt="12" />
+			<column name="low_grade" type="int64" jt="4" />
+			<column name="high_grade" type="int64" jt="4" />
+			<column name="rank_stars" type="int64" jt="4" />
+			<index name="pk_dim_school" unique="PRIMARY_KEY" >
+				<column name="school_id" />
+			</index>
+		</table>
+		<table name="dim_seller" >
+			<column name="seller_id" type="int64" jt="4" mandatory="y" />
+			<column name="seller_information" type="string" length="255" jt="12" />
+			<index name="pk_dim_seller" unique="PRIMARY_KEY" >
+				<column name="seller_id" />
+			</index>
+		</table>
+		<table name="dim_time" >
+			<column name="time_id" type="int64" jt="4" mandatory="y" />
+			<column name="year" type="int64" jt="4" />
+			<index name="pk_dim_time" unique="PRIMARY_KEY" >
+				<column name="time_id" />
+			</index>
+		</table>
+		<table name="facts_housing" >
+			<column name="facts_id" type="int64" jt="4" mandatory="y" />
+			<column name="living_wage" type="numeric" length="8" decimal="2" jt="2" />
+			<column name="poverty_wage" type="numeric" length="8" decimal="2" jt="2" />
+			<column name="minimum_wage" type="numeric" length="8" decimal="2" jt="2" />
+			<column name="food_price" type="numeric" length="6" decimal="2" jt="2" />
+			<column name="child_care_price" type="numeric" length="6" decimal="2" jt="2" />
+			<column name="medical_price" type="numeric" length="8" decimal="2" jt="2" />
+			<column name="housing_price" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="transportation_price" type="numeric" length="6" decimal="2" jt="2" />
+			<column name="civic_price" type="numeric" length="6" decimal="2" jt="2" />
+			<column name="internet_mobile_price" type="numeric" length="6" decimal="2" jt="2" />
+			<column name="other_price" type="numeric" length="6" decimal="2" jt="2" />
+			<column name="annual__income_after_taxes" prior="annual_ income_after_taxes" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="annual_taxes" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="annual_income_before_taxes" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="typical_annual__salary" prior="typical_annual _salary" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="building_assessed_value" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="building_appraised_value" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="sale_price" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="land_appraised_value" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="land_assessed_value" type="numeric" length="10" decimal="2" jt="2" />
+			<column name="population" type="int64" jt="4" />
+			<column name="index_total_count" type="int64" jt="4" />
+			<column name="violent_total_count" type="int64" jt="4" />
+			<column name="murder_countrape_count" type="int64" jt="4" />
+			<column name="robbery_count" type="int64" jt="4" />
+			<column name="aggrevated_assault_count" type="int64" jt="4" />
+			<column name="property_total_count" type="int64" jt="4" />
+			<column name="burglary_count" type="int64" jt="4" />
+			<column name="larceny_count" type="int64" jt="4" />
+			<column name="MV_theft_count" type="int64" jt="4" />
+			<column name="pupil_teacher_ratio" type="int64" jt="4" />
+			<column name="time_id" type="int64" jt="4" mandatory="y" />
+			<column name="school_id" type="int64" jt="4" />
+			<column name="building_id" type="int64" jt="4" mandatory="y" />
+			<column name="sale_id" type="int64" jt="4" mandatory="y" />
+			<column name="seller_id" type="int64" jt="4" mandatory="y" />
+			<column name="land_id" type="int64" jt="4" mandatory="y" />
+			<column name="profession_id" type="int64" jt="4" mandatory="y" />
+			<column name="location_id" type="int64" jt="4" mandatory="y" />
+			<fk name="fk_facts_housing_dim_profession" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_profession" >
+				<fk_column name="profession_id" pk="profession_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_seller" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_seller" >
+				<fk_column name="seller_id" pk="seller_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_land" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_land" >
+				<fk_column name="land_id" pk="land_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_sale" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_sale" >
+				<fk_column name="sale_id" pk="sale_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_location" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_location" >
+				<fk_column name="location_id" pk="location_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_building" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_building" >
+				<fk_column name="building_id" pk="building_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_time" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_time" >
+				<fk_column name="time_id" pk="time_id" />
+			</fk>
+			<fk name="fk_facts_housing_dim_school" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_school" >
+				<fk_column name="school_id" pk="school_id" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-bab" confirmed="y" show_relation="columns" >
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_building" color="C1D8EE" x="850" y="510" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_land" color="C1D8EE" x="102" y="442" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_location" color="C1D8EE" x="901" y="221" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_profession" color="C1D8EE" x="102" y="306" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_sale" color="C1D8EE" x="102" y="714" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_school" color="C1D8EE" x="901" y="765" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_seller" color="C1D8EE" x="102" y="578" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_time" color="C1D8EE" x="102" y="833" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="facts_housing" color="C1D8EE" x="425" y="221" />
+		<callout x="51" y="51" pointer="Round" >
+			<comment><![CDATA[This is a layout - a diagram with tools.
+- Create new entities by right-clicking the layout. 
+- Double-click entity headers to edit.
+- For a better understanding of the schema, create multiple layouts.
+- Deploy the model into the database by converting it first to the physical design.]]></comment>
+		</callout>
+		<script name="SQL_Editor" id="Editor-f9e" language="SQL" >
+			<string><![CDATA[CREATE SCHEMA INSTANCE;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_building ( 
+	building_id int64 NOT NULL  ,
+	building_num_units int64  ,
+	building_year_built int64  ,
+	building_num_stories int64  ,
+	building_num_beds int64  ,
+	building_num_baths int64  ,
+	building_num_sqft int64  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_building ADD PRIMARY KEY ( building_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_land ( 
+	land_id int64 NOT NULL  ,
+	land_type string  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_land ADD PRIMARY KEY ( land_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_location ( 
+	location_id int64 NOT NULL  ,
+	county string  ,
+	zip_code int64  ,
+	longitude int64  ,
+	latitude int64  ,
+	state string  ,
+	city string  ,
+	street_address string  ,
+	township string  ,
+	property_type string  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_location ADD PRIMARY KEY ( location_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_profession ( 
+	profession_id int64 NOT NULL  ,
+	profession_title string  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_profession ADD PRIMARY KEY ( profession_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_sale ( 
+	sale_id int64 NOT NULL  ,
+	proeprty_id int64  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_sale ADD PRIMARY KEY ( sale_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_school ( 
+	school_id int64 NOT NULL  ,
+	school_name string  ,
+	school_type string  ,
+	is_private string  ,
+	school_level string  ,
+	low_grade int64  ,
+	high_grade int64  ,
+	rank_stars int64  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_school ADD PRIMARY KEY ( school_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_seller ( 
+	seller_id int64 NOT NULL  ,
+	seller_information string  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_seller ADD PRIMARY KEY ( seller_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.dim_time ( 
+	time_id int64 NOT NULL  ,
+	year int64  
+ );
+
+ALTER TABLE housingNY_dw_lgl.INSTANCE.dim_time ADD PRIMARY KEY ( time_id )  NOT ENFORCED;
+
+CREATE TABLE housingNY_dw_lgl.INSTANCE.facts_housing ( 
+	facts_id int64 NOT NULL  ,
+	living_wage numeric  ,
+	poverty_wage numeric  ,
+	minimum_wage numeric  ,
+	food_price numeric  ,
+	child_care_price numeric  ,
+	medical_price numeric  ,
+	housing_price numeric  ,
+	transportation_price numeric  ,
+	civic_price numeric  ,
+	internet_mobile_price numeric  ,
+	other_price numeric  ,
+	annual__income_after_taxes numeric  ,
+	annual_taxes numeric  ,
+	annual_income_before_taxes numeric  ,
+	typical_annual__salary numeric  ,
+	building_assessed_value numeric  ,
+	building_appraised_value numeric  ,
+	sale_price numeric  ,
+	land_appraised_value numeric  ,
+	land_assessed_value numeric  ,
+	population int64  ,
+	index_total_count int64  ,
+	violent_total_count int64  ,
+	murder_countrape_count int64  ,
+	robbery_count int64  ,
+	aggrevated_assault_count int64  ,
+	property_total_count int64  ,
+	burglary_count int64  ,
+	larceny_count int64  ,
+	MV_theft_count int64  ,
+	pupil_teacher_ratio int64  ,
+	time_id int64 NOT NULL  ,
+	school_id int64  ,
+	building_id int64 NOT NULL  ,
+	sale_id int64 NOT NULL  ,
+	seller_id int64 NOT NULL  ,
+	land_id int64 NOT NULL  ,
+	profession_id int64 NOT NULL  ,
+	location_id int64 NOT NULL  
+ );
+]]></string>
+		</script>
+	</layout>
+</project>
