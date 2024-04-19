@@ -12,7 +12,7 @@
     - MIT Living Wage (204 kb) (https://livingwage.mit.edu/counties/13151)
     - NYC Housing Data (112 GB) (https://www.dolthub.com/repositories/dolthub/us-housing-prices-v2/data/main/sales)
     - Crime Data (32KB) (https://www.mylocalcrime.com/?kbid=62750#40.732326%2C%20-73.25099)
-    - School Ranking Data (https://developer.schooldigger.com/)
+    - School Ranking Data (23MB) (https://developer.schooldigger.com/)
 
 5. Methods:
 
