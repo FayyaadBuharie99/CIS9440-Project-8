@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="housingNY_dw_lgl" id="Snowflake-10c0" database="Snowflake" >
+	<schema name="INSTANCE" catalogname="housingNY_dw_lgl" >
+		<table name="DIM_BUILDING" prior="dim_building" >
+			<column name="BUILDING_ID" prior="building_id" type="integer" jt="4" mandatory="y" />
+			<column name="BUILDING_NUM_UNITS" prior="building_num_units" type="integer" jt="4" />
+			<column name="BUILDING_YEAR_BUILT" prior="building_year_built" type="integer" jt="4" />
+			<column name="BUILDING_NUM_STORIES" prior="building_num_stories" type="integer" jt="4" />
+			<column name="BUILDING_NUM_BEDS" prior="building_num_beds" type="integer" jt="4" />
+			<column name="BUILDING_NUM_BATHS" prior="building_num_baths" type="integer" jt="4" />
+			<column name="BUILDING_NUM_SQFT" prior="building_num_sqft" type="integer" jt="4" />
+			<index name="PK_DIM_BUILDING" unique="PRIMARY_KEY" >
+				<column name="BUILDING_ID" />
+			</index>
+		</table>
+		<table name="DIM_LAND" prior="dim_land" >
+			<column name="LAND_ID" prior="land_id" type="integer" jt="4" mandatory="y" />
+			<column name="LAND_TYPE" prior="land_type" type="varchar" length="255" jt="12" />
+			<index name="PK_DIM_LAND" unique="PRIMARY_KEY" >
+				<column name="LAND_ID" />
+			</index>
+		</table>
+		<table name="DIM_LOCATION" prior="dim_location" >
+			<column name="LOCATION_ID" prior="location_id" type="integer" jt="4" mandatory="y" />
+			<column name="COUNTY" prior="county" type="varchar" length="255" jt="12" />
+			<column name="ZIP_CODE" prior="zip_code" type="integer" jt="4" />
+			<column name="LONGITUDE" prior="longitude" type="integer" jt="4" />
+			<column name="LATITUDE" prior="latitude" type="integer" jt="4" />
+			<column name="STATE" prior="state" type="varchar" length="255" jt="12" />
+			<column name="CITY" prior="city" type="varchar" length="255" jt="12" />
+			<column name="STREET_ADDRESS" prior="street_address" type="varchar" length="255" jt="12" />
+			<column name="TOWNSHIP" prior="township" type="varchar" length="255" jt="12" />
+			<column name="PROPERTY_TYPE" prior="property_type" type="varchar" length="255" jt="12" />
+			<index name="PK_DIM_LOCATION" unique="PRIMARY_KEY" >
+				<column name="LOCATION_ID" />
+			</index>
+		</table>
+		<table name="DIM_PROFESSION" prior="dim_profession" >
+			<column name="PROFESSION_ID" prior="profession_id" type="integer" jt="4" mandatory="y" />
+			<column name="PROFESSION_TITLE" prior="profession_title" type="varchar" length="255" jt="12" />
+			<index name="PK_DIM_PROFESSION" unique="PRIMARY_KEY" >
+				<column name="PROFESSION_ID" />
+			</index>
+		</table>
+		<table name="DIM_SALE" prior="dim_sale" >
+			<column name="SALE_ID" prior="sale_id" type="integer" jt="4" mandatory="y" />
+			<column name="PROEPRTY_ID" prior="proeprty_id" type="integer" jt="4" />
+			<index name="PK_DIM_SALE" unique="PRIMARY_KEY" >
+				<column name="SALE_ID" />
+			</index>
+		</table>
+		<table name="DIM_SCHOOL" prior="dim_school" >
+			<column name="SCHOOL_ID" prior="school_id" type="integer" jt="4" mandatory="y" />
+			<column name="SCHOOL_NAME" prior="school_name" type="varchar" length="255" jt="12" />
+			<column name="IS_PRIVATE" prior="is_private" type="varchar" length="100" jt="12" />
+			<column name="SCHOOL_LEVEL" prior="school_level" type="varchar" length="100" jt="12" />
+			<column name="LOW_GRADE" prior="low_grade" type="integer" jt="4" />
+			<column name="HIGH_GRADE" prior="high_grade" type="integer" jt="4" />
+			<column name="RANK_STARS" prior="rank_stars" type="integer" jt="4" />
+			<index name="PK_DIM_SCHOOL" unique="PRIMARY_KEY" >
+				<column name="SCHOOL_ID" />
+			</index>
+		</table>
+		<table name="DIM_SELLER" prior="dim_seller" >
+			<column name="SELLER_ID" prior="seller_id" type="integer" jt="4" mandatory="y" />
+			<column name="SELLER_INFORMATION" prior="seller_information" type="varchar" length="255" jt="12" />
+			<index name="PK_DIM_SELLER" unique="PRIMARY_KEY" >
+				<column name="SELLER_ID" />
+			</index>
+		</table>
+		<table name="DIM_TIME" prior="dim_time" >
+			<column name="TIME_ID" prior="time_id" type="integer" jt="4" mandatory="y" />
+			<column name="YEAR" prior="year" type="integer" jt="4" />
+			<index name="PK_DIM_TIME" unique="PRIMARY_KEY" >
+				<column name="TIME_ID" />
+			</index>
+		</table>
+		<table name="FACTS_HOUSING" prior="facts_housing" >
+			<column name="FACTS_ID" prior="facts_id" type="integer" jt="4" mandatory="y" />
+			<column name="LIVING_WAGE" prior="living_wage" type="DECIMAL" length="8" decimal="2" jt="3" />
+			<column name="POVERTY_WAGE" prior="poverty_wage" type="DECIMAL" length="8" decimal="2" jt="3" />
+			<column name="MINIMUM_WAGE" prior="minimum_wage" type="DECIMAL" length="8" decimal="2" jt="3" />
+			<column name="INTERNET_MOBILE_PRICE" prior="internet_mobile_price" type="DECIMAL" length="6" decimal="2" jt="3" />
+			<column name="ANNUAL__INCOME_AFTER_TAXES" prior="annual__income_after_taxes" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="TYPICAL_ANNUAL__SALARY" prior="typical_annual__salary" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="BUILDING_ASSESSED_VALUE" prior="building_assessed_value" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="BUILDING_APPRAISED_VALUE" prior="building_appraised_value" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="SALE_PRICE" prior="sale_price" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="LAND_APPRAISED_VALUE" prior="land_appraised_value" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="LAND_ASSESSED_VALUE" prior="land_assessed_value" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="POPULATION" prior="population" type="integer" jt="4" />
+			<column name="INDEX_TOTAL_COUNT" prior="index_total_count" type="integer" jt="4" />
+			<column name="VIOLENT_TOTAL_COUNT" prior="violent_total_count" type="integer" jt="4" />
+			<column name="MURDER_COUNTRAPE_COUNT" prior="murder_countrape_count" type="integer" jt="4" />
+			<column name="ROBBERY_COUNT" prior="robbery_count" type="integer" jt="4" />
+			<column name="AGGREVATED_ASSAULT_COUNT" prior="aggrevated_assault_count" type="integer" jt="4" />
+			<column name="PROPERTY_TOTAL_COUNT" prior="property_total_count" type="integer" jt="4" />
+			<column name="BURGLARY_COUNT" prior="burglary_count" type="integer" jt="4" />
+			<column name="LARCENY_COUNT" prior="larceny_count" type="integer" jt="4" />
+			<column name="MV_THEFT_COUNT" prior="MV_theft_count" type="integer" jt="4" />
+			<column name="PUPIL_TEACHER_RATIO" prior="pupil_teacher_ratio" type="integer" jt="4" />
+			<column name="TIME_ID" prior="time_id" type="integer" jt="4" mandatory="y" />
+			<column name="SCHOOL_ID" prior="school_id" type="integer" jt="4" />
+			<column name="BUILDING_ID" prior="building_id" type="integer" jt="4" mandatory="y" />
+			<column name="SALE_ID" prior="sale_id" type="integer" jt="4" mandatory="y" />
+			<column name="SELLER_ID" prior="seller_id" type="integer" jt="4" mandatory="y" />
+			<column name="LAND_ID" prior="land_id" type="integer" jt="4" mandatory="y" />
+			<column name="PROFESSION_ID" prior="profession_id" type="integer" jt="4" mandatory="y" />
+			<column name="LOCATION_ID" prior="location_id" type="integer" jt="4" mandatory="y" />
+			<fk name="FK_FACTS_HOUSING_DIM_PROFESSION" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_PROFESSION" >
+				<fk_column name="PROFESSION_ID" pk="PROFESSION_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_SELLER" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_SELLER" >
+				<fk_column name="SELLER_ID" pk="SELLER_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_LAND" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_LAND" >
+				<fk_column name="LAND_ID" pk="LAND_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_SALE" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_SALE" >
+				<fk_column name="SALE_ID" pk="SALE_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_LOCATION" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_LOCATION" >
+				<fk_column name="LOCATION_ID" pk="LOCATION_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_BUILDING" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_BUILDING" >
+				<fk_column name="BUILDING_ID" pk="BUILDING_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_TIME" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_TIME" >
+				<fk_column name="TIME_ID" pk="TIME_ID" />
+			</fk>
+			<fk name="FK_FACTS_HOUSING_DIM_SCHOOL" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="DIM_SCHOOL" >
+				<fk_column name="SCHOOL_ID" pk="SCHOOL_ID" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-ab0" confirmed="y" show_relation="columns" >
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_BUILDING" color="C1D8EE" x="850" y="510" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_LAND" color="C1D8EE" x="102" y="340" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_LOCATION" color="C1D8EE" x="901" y="221" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_PROFESSION" color="C1D8EE" x="102" y="221" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_SALE" color="C1D8EE" x="102" y="578" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_SCHOOL" color="C1D8EE" x="901" y="731" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_SELLER" color="C1D8EE" x="102" y="459" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="DIM_TIME" color="C1D8EE" x="102" y="714" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="FACTS_HOUSING" color="C1D8EE" x="425" y="221" />
+		<callout x="51" y="51" pointer="Round" >
+			<comment><![CDATA[This is a layout - a diagram with tools.
+- Create new entities by right-clicking the layout. 
+- Double-click entity headers to edit.
+- For a better understanding of the schema, create multiple layouts.
+- Deploy the model into the database by converting it first to the physical design.]]></comment>
+		</callout>
+	</layout>
+</project>
