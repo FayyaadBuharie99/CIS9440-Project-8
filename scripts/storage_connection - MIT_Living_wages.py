@@ -32,7 +32,7 @@ BUCKET_NAME = "housingproject_cis9440"
 blob_name = "MIT_typicalannualsalaries.csv"
 
 # Set the environment variable to the path of your service account key file
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/gabisanches/Desktop/CIS9440 - Data Warehouse/Final_Project/CIS9440-Project-8/scripts/liquid-evening-419521-f3bbe91c1085.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/gabisanches/Desktop/CIS9440 - Data Warehouse/Final_Project/CIS9440-Project-8/scripts/config.json"
 
 # Convert DataFrame to CSV
 output = StringIO()
