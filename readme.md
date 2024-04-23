@@ -14,9 +14,9 @@
     - Crime Data (32KB) (https://www.mylocalcrime.com/?kbid=62750#40.732326%2C%20-73.25099)
     - School Ranking Data (15MB) (https://developer.schooldigger.com/)
 
-5. Methods:
+5. Methods: We use python scripts to extract the data from each of our datasets, such as: the housing data which contained information about various sales of home from all the states, the crime data which contained information about crime rates in each county, the school ranking data which contained information about the school ranking in each county, and the living wage data which contained information about the living wage in each county. All of the extracted data is then uploaded to a cloud storage -- in our case we opted to utilize Google Cloud Platform to achieve this. Our goal is to perform the ELT as there is a lot of data (namely the housing data), and it would less extensive to transform it.
 
-6. Data Tools:
+6. Data Tools: 1.  
 
 7. Interface: 
 
