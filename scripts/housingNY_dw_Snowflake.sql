@@ -1,6 +1,6 @@
-CREATE SCHEMA INSTANCE;
+CREATE SCHEMA HOUSINGNY;
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_BUILDING ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_BUILDING ( 
 	BUILDING_ID          integer NOT NULL   ,
 	BUILDING_NUM_UNITS   integer    ,
 	BUILDING_YEAR_BUILT  integer    ,
@@ -11,19 +11,19 @@ CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_BUILDING (
 	CONSTRAINT PK_DIM_BUILDING PRIMARY KEY ( BUILDING_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_LAND ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_LAND ( 
 	LAND_ID              integer NOT NULL   ,
 	LAND_TYPE            varchar(255)    ,
 	CONSTRAINT PK_DIM_LAND PRIMARY KEY ( LAND_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_LOCATION ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_LOCATION ( 
 	LOCATION_ID          integer NOT NULL   ,
-	COUNTY               varchar(255)    ,
+	COUNTIES             varchar(255)    ,
 	ZIP_CODE             integer    ,
 	LONGITUDE            integer    ,
 	LATITUDE             integer    ,
-	STATE                varchar(255)    ,
+	STATE_NAME           varchar(255)    ,
 	CITY                 varchar(255)    ,
 	STREET_ADDRESS       varchar(255)    ,
 	TOWNSHIP             varchar(255)    ,
@@ -31,19 +31,19 @@ CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_LOCATION (
 	CONSTRAINT PK_DIM_LOCATION PRIMARY KEY ( LOCATION_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_PROFESSION ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_PROFESSION ( 
 	PROFESSION_ID        integer NOT NULL   ,
 	PROFESSION_TITLE     varchar(255)    ,
 	CONSTRAINT PK_DIM_PROFESSION PRIMARY KEY ( PROFESSION_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_SALE ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_SALE ( 
 	SALE_ID              integer NOT NULL   ,
 	PROEPRTY_ID          integer    ,
 	CONSTRAINT PK_DIM_SALE PRIMARY KEY ( SALE_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_SCHOOL ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_SCHOOL ( 
 	SCHOOL_ID            integer NOT NULL   ,
 	SCHOOL_NAME          varchar(255)    ,
 	IS_PRIVATE           varchar(100)    ,
@@ -54,32 +54,31 @@ CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_SCHOOL (
 	CONSTRAINT PK_DIM_SCHOOL PRIMARY KEY ( SCHOOL_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_SELLER ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_SELLER ( 
 	SELLER_ID            integer NOT NULL   ,
 	SELLER_INFORMATION   varchar(255)    ,
 	CONSTRAINT PK_DIM_SELLER PRIMARY KEY ( SELLER_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.DIM_TIME ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.DIM_TIME ( 
 	TIME_ID              integer NOT NULL   ,
-	YEAR                 integer    ,
+	YEAR_NUM             integer    ,
 	CONSTRAINT PK_DIM_TIME PRIMARY KEY ( TIME_ID )
  );
 
-CREATE  TABLE "housingNY_dw_lgl".INSTANCE.FACTS_HOUSING ( 
+CREATE  TABLE "housingNY_dw_lgl".HOUSINGNY.FACTS_HOUSING ( 
 	FACTS_ID             integer NOT NULL   ,
 	LIVING_WAGE          DECIMAL(8,2)    ,
 	POVERTY_WAGE         DECIMAL(8,2)    ,
 	MINIMUM_WAGE         DECIMAL(8,2)    ,
-	INTERNET_MOBILE_PRICE DECIMAL(6,2)    ,
-	ANNUAL__INCOME_AFTER_TAXES DECIMAL(10,2)    ,
+	LIVING_EXPENSES      DECIMAL(10,2)    ,
 	TYPICAL_ANNUAL__SALARY DECIMAL(10,2)    ,
 	BUILDING_ASSESSED_VALUE DECIMAL(10,2)    ,
 	BUILDING_APPRAISED_VALUE DECIMAL(10,2)    ,
 	SALE_PRICE           DECIMAL(10,2)    ,
 	LAND_APPRAISED_VALUE DECIMAL(10,2)    ,
 	LAND_ASSESSED_VALUE  DECIMAL(10,2)    ,
-	POPULATION           integer    ,
+	POPULATION_NUM       integer    ,
 	INDEX_TOTAL_COUNT    integer    ,
 	VIOLENT_TOTAL_COUNT  integer    ,
 	MURDER_COUNTRAPE_COUNT integer    ,
