@@ -22,11 +22,11 @@
 		</table>
 		<table name="dim_location" prior="profession_id" >
 			<column name="location_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="county" type="VARCHAR" length="255" jt="12" />
+			<column name="counties" prior="county" type="VARCHAR" length="255" jt="12" />
 			<column name="zip_code" type="INT" jt="4" />
 			<column name="longitude" type="INT" jt="4" />
 			<column name="latitude" type="INT" jt="4" />
-			<column name="state" type="VARCHAR" length="255" jt="12" />
+			<column name="state_name" prior="state" type="VARCHAR" length="255" jt="12" />
 			<column name="city" type="VARCHAR" length="255" jt="12" />
 			<column name="street_address" type="VARCHAR" length="255" jt="12" />
 			<column name="township" type="VARCHAR" length="255" jt="12" />
@@ -70,7 +70,7 @@
 		</table>
 		<table name="dim_time" prior="Entity" >
 			<column name="time_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="year" type="INT" jt="4" />
+			<column name="year_num" prior="year" type="INT" jt="4" />
 			<index name="pk_dim_time" unique="PRIMARY_KEY" >
 				<column name="time_id" />
 			</index>
@@ -80,15 +80,14 @@
 			<column name="living_wage" type="DECIMAL" length="8" decimal="2" jt="3" />
 			<column name="poverty_wage" type="DECIMAL" length="8" decimal="2" jt="3" />
 			<column name="minimum_wage" type="DECIMAL" length="8" decimal="2" jt="3" />
-			<column name="internet_mobile_price" type="DECIMAL" length="6" decimal="2" jt="3" />
-			<column name="annual_ income_after_taxes" type="DECIMAL" length="10" decimal="2" jt="3" />
+			<column name="living_expenses" prior="annual_ income_after_taxes" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="typical_annual _salary" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="building_assessed_value" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="building_appraised_value" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="sale_price" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="land_appraised_value" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="land_assessed_value" type="DECIMAL" length="10" decimal="2" jt="3" />
-			<column name="population" type="INT" jt="4" />
+			<column name="population_num" prior="population" type="INT" jt="4" />
 			<column name="index_total_count" type="INT" jt="4" />
 			<column name="violent_total_count" type="INT" jt="4" />
 			<column name="murder_countrape_count" type="INT" jt="4" />
