@@ -16,7 +16,11 @@
 
 5. Methods: We use python scripts to extract the data from each of our datasets, such as: the housing data which contained information about various sales of home from all the states, the crime data which contained information about crime rates in each county, the school ranking data which contained information about the school ranking in each county, and the living wage data which contained information about the living wage in each county. All of the extracted data is then uploaded to a cloud storage -- in our case we opted to utilize Google Cloud Platform to achieve this. Our goal is to perform the ELT as there is a lot of data (namely the housing data), and it would less extensive to transform it.
 
-6. Data Tools: 1.  
+6. Data Tools:
+            1.  Snowflake - to upload the stored data to a data warehouse
+            2.  Google Cloud Platform - to upload the raw data extracted from our datasets to a cloud  storage platform.
+            3.  Visual Studio - to clone our repository that contains our scripts, data models, and data dictionaries.
+            4.  Tableau - to visualize the data by utilizing the data from the data warehouse.
 
 7. Interface: 
 
