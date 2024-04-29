@@ -35,7 +35,7 @@ Our system is created to assist people who are considering to purchase a house i
 
 ### Data Sources
 - MIT Living Wage (204 kb) (https://livingwage.mit.edu/counties/13151)
--       Metadata: [data_dictionary_MITLivingWage.xlsx](https://github.com/FayyaadBuharie99/CIS9440-Project-8/files/15144604/data_dictionary_MITLivingWage.xlsx)
+  Metadata: [data_dictionary_MITLivingWage.xlsx](https://github.com/FayyaadBuharie99/CIS9440-Project-8/files/15144604/data_dictionary_MITLivingWage.xlsx)
 - NYC Housing Data (112 GB) (https://www.dolthub.com/repositories/dolthub/us-housing-prices-v2/data/main/sales)
 -       Metadata: [data_dictionary_housing_prices.xlsx](https://github.com/FayyaadBuharie99/CIS9440-Project-8/files/15144647/data_dictionary_housing_prices.xlsx)
 - Crime Data (32KB) (https://www.mylocalcrime.com/?kbid=62750#40.732326%2C%20-73.25099)
