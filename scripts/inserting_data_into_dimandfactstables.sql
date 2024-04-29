@@ -1,0 +1,57 @@
+USE DATABASE HOUSING_CIS9440;
+USE SCHEMA HOUSINGNY;
+
+-- Populate dim_profession with unique professions from MIT_typicalannualsalaries
+INSERT INTO dim_profession (PROFESSION_ID, PROFESSION_TITLE)
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY "Occupational Area") AS PROFESSION_ID,
+    "Occupational Area" AS PROFESSION_TITLE
+FROM "MIT_typicalannualsalaries"
+WHERE "Occupational Area" IS NOT NULL
+GROUP BY "Occupational Area";
+
+-- Insert unique counties into dim_location
+INSERT INTO dim_location (LOCATION_ID, COUNTIES)
+SELECT ROW_NUMBER() OVER (ORDER BY COUNTIES) AS LOCATION_ID, COUNTIES
+FROM (
+    SELECT DISTINCT COUNTIES FROM "MIT_LIVINGWAGE"
+    UNION
+    SELECT DISTINCT "Counties " FROM "MIT_typicalexpenses"
+) AS counties_list;
+
+
+
+
+-- Create or replace sequence for generating FACTS_ID
+CREATE OR REPLACE SEQUENCE FACTS_ID_SEQUENCE;
+
+-- Insert data into facts_housing using the sequence to generate FACTS_ID
+INSERT INTO HOUSING_CIS9440.HOUSINGNY.FACTS_HOUSING (
+    FACTS_ID,
+    LIVING_WAGE,
+    POVERTY_WAGE,
+    MINIMUM_WAGE,
+    LIVING_EXPENSES,
+    TYPICAL_ANNUAL__SALARY,
+    PROFESSION_ID,
+    LOCATION_ID
+)
+SELECT
+    FACTS_ID_SEQUENCE.NEXTVAL AS FACTS_ID,
+    COALESCE(TO_NUMBER(REPLACE(REPLACE("MIT_LIVINGWAGE".LIVING_WAGE, '$', ''), ',', '')), 0) AS LIVING_WAGE,
+    COALESCE(TO_NUMBER(REPLACE(REPLACE("MIT_LIVINGWAGE".POVERTY_WAGE, '$', ''), ',', '')), 0) AS POVERTY_WAGE,
+    COALESCE(TO_NUMBER(REPLACE(REPLACE("MIT_LIVINGWAGE".MINIMUM_WAGE, '$', ''), ',', '')), 0) AS MINIMUM_WAGE,
+    COALESCE(TO_NUMBER(REPLACE(REPLACE("MIT_typicalexpenses".LIVING_EXPENSES, '$', ''), ',', '')), 0) AS LIVING_EXPENSES,
+    COALESCE(TO_NUMBER(REPLACE(REPLACE("MIT_typicalannualsalaries"."Typical Annual Salary", '$', ''), ',', '')), 0) AS TYPICAL_ANNUAL__SALARY,
+    DIM_PROFESSION.PROFESSION_ID AS PROFESSION_ID,
+    DIM_LOCATION.LOCATION_ID AS LOCATION_ID
+FROM
+    "MIT_LIVINGWAGE"
+JOIN
+    "MIT_typicalexpenses" ON "MIT_LIVINGWAGE".COUNTIES = "MIT_typicalexpenses"."Counties "
+JOIN
+    "MIT_typicalannualsalaries" ON "MIT_LIVINGWAGE".COUNTIES = "MIT_typicalannualsalaries"."Counties"
+JOIN
+    "DIM_PROFESSION" ON "MIT_typicalannualsalaries"."Occupational Area" = "DIM_PROFESSION".PROFESSION_TITLE
+JOIN
+    "DIM_LOCATION" ON "MIT_LIVINGWAGE".COUNTIES = "DIM_LOCATION".COUNTIES;
