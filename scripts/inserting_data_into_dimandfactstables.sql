@@ -19,8 +19,17 @@ FROM (
     SELECT DISTINCT "Counties " FROM "MIT_typicalexpenses"
 ) AS counties_list;
 
--- updtaing dim_location to add data from the school_data 
 CREATE SEQUENCE LOCATION_ID_SEQUENCE;
+
+-- Insert unique counties into dim_location
+INSERT INTO dim_location (LOCATION_ID, COUNTIES)
+SELECT ROW_NUMBER() OVER (ORDER BY COUNTIES) AS LOCATION_ID, COUNTIES
+FROM (
+    SELECT DISTINCT COUNTIES FROM "MIT_LIVINGWAGE"
+    UNION
+    SELECT DISTINCT "Counties " FROM "MIT_typicalexpenses"
+) AS counties_list;
+
 
 -- Insert new rows into DIM_LOCATION for counties that do not exist
 INSERT INTO HOUSING_CIS9440.HOUSINGNY.DIM_LOCATION (LOCATION_ID, COUNTIES, CITY, STATE_NAME, ZIP_CODE)
@@ -54,6 +63,7 @@ FROM (
 ) sd
 WHERE dim_loc.COUNTIES = sd.COUNTY;
 
+
 -- clean crime data to match the names on the MIT Data and School Data
 -- Update NYS_CRIME_DATA to include " County" in county names
 UPDATE NYS_CRIME_DATA
@@ -62,10 +72,14 @@ SET "County/Region" = "County/Region" || ' County';
 SELECT DISTINCT "County/Region" AS COUNTY
 FROM HOUSING_CIS9440.HOUSINGNY.NYS_CRIME_DATA
 WHERE "County/Region" IS NOT NULL;
--- Insert Missing Counties into DIM_LOCATION
+-- Insert Missing Counties into DIM_LOCATION if they don't exist
+SELECT DISTINCT "County/Region" AS COUNTY
+FROM HOUSING_CIS9440.HOUSINGNY.NYS_CRIME_DATA
+WHERE "County/Region" IS NOT NULL;
+-- Insert new counties from NYS_CRIME_DATA into DIM_LOCATION if they don't exist
 INSERT INTO HOUSING_CIS9440.HOUSINGNY.DIM_LOCATION (LOCATION_ID, COUNTIES)
 SELECT
-    (SELECT MAX(LOCATION_ID) + 1 FROM HOUSING_CIS9440.HOUSINGNY.DIM_LOCATION) AS LOCATION_ID,
+    ROW_NUMBER() OVER (ORDER BY COUNTY) AS LOCATION_ID,
     COUNTY AS COUNTIES
 FROM (
     SELECT DISTINCT "County/Region" AS COUNTY
