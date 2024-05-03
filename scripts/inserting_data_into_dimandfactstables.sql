@@ -58,7 +58,25 @@ WHERE dim_loc.COUNTIES = sd.COUNTY;
 -- Update NYS_CRIME_DATA to include " County" in county names
 UPDATE NYS_CRIME_DATA
 SET "County/Region" = "County/Region" || ' County';
--- - updtaing dim_location to add data from the crime data 
+-- updtaing dim_location to add data from the crime data 
+SELECT DISTINCT "County/Region" AS COUNTY
+FROM HOUSING_CIS9440.HOUSINGNY.NYS_CRIME_DATA
+WHERE "County/Region" IS NOT NULL;
+-- Insert Missing Counties into DIM_LOCATION
+INSERT INTO HOUSING_CIS9440.HOUSINGNY.DIM_LOCATION (LOCATION_ID, COUNTIES)
+SELECT
+    (SELECT MAX(LOCATION_ID) + 1 FROM HOUSING_CIS9440.HOUSINGNY.DIM_LOCATION) AS LOCATION_ID,
+    COUNTY AS COUNTIES
+FROM (
+    SELECT DISTINCT "County/Region" AS COUNTY
+    FROM HOUSING_CIS9440.HOUSINGNY.NYS_CRIME_DATA
+    WHERE "County/Region" IS NOT NULL
+) nc
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM HOUSING_CIS9440.HOUSINGNY.DIM_LOCATION
+    WHERE COUNTIES = nc.COUNTY
+);
 
 
 -- Create or replace sequence for generating FACTS_ID
