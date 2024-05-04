@@ -13,13 +13,6 @@
 				<column name="building_id" />
 			</index>
 		</table>
-		<table name="dim_land" prior="dim_" >
-			<column name="land_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="land_type" type="VARCHAR" length="255" jt="12" />
-			<index name="pk_dim_land" unique="PRIMARY_KEY" >
-				<column name="land_id" />
-			</index>
-		</table>
 		<table name="dim_location" prior="profession_id" >
 			<column name="location_id" type="BIGINT" jt="-5" mandatory="y" />
 			<column name="counties" prior="county" type="VARCHAR" length="255" jt="12" />
@@ -44,7 +37,10 @@
 		</table>
 		<table name="dim_sale" prior="Entity" >
 			<column name="sale_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="proeprty_id" type="INT" jt="4" />
+			<column name="zipcode" prior="proeprty_id" type="INT" jt="4" mandatory="y" />
+			<column name="avg_sale_price" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="min_sale_price" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="max_sale_price" type="BIGINT" jt="-5" mandatory="y" />
 			<index name="pk_dim_sale" unique="PRIMARY_KEY" >
 				<column name="sale_id" />
 			</index>
@@ -83,10 +79,7 @@
 			<column name="living_expenses" prior="annual_ income_after_taxes" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="typical_annual _salary" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="building_assessed_value" type="DECIMAL" length="10" decimal="2" jt="3" />
-			<column name="building_appraised_value" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="sale_price" type="DECIMAL" length="10" decimal="2" jt="3" />
-			<column name="land_appraised_value" type="DECIMAL" length="10" decimal="2" jt="3" />
-			<column name="land_assessed_value" type="DECIMAL" length="10" decimal="2" jt="3" />
 			<column name="population_num" prior="population" type="INT" jt="4" />
 			<column name="index_total_count" type="INT" jt="4" />
 			<column name="violent_total_count" type="INT" jt="4" />
@@ -102,19 +95,12 @@
 			<column name="school_id" type="INT" jt="4" />
 			<column name="building_id" type="INT" jt="4" mandatory="y" />
 			<column name="sale_id" prior="property_id" type="INT" jt="4" mandatory="y" />
-			<column name="seller_id" type="INT" jt="4" mandatory="y" />
-			<column name="land_id" type="INT" jt="4" mandatory="y" />
 			<column name="profession_id" type="INT" jt="4" mandatory="y" />
 			<column name="location_id" type="INT" jt="4" mandatory="y" />
 			<fk name="fk_facts_housing_dim_profession" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_profession" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="profession_id" pk="profession_id" />
 			</fk>
-			<fk name="fk_facts_housing_dim_seller" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_seller" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
-				<fk_column name="seller_id" pk="seller_id" />
-			</fk>
-			<fk name="fk_facts_housing_dim_land" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_land" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
-				<fk_column name="land_id" pk="land_id" />
-			</fk>
+			<fk name="fk_facts_housing_dim_seller" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_seller" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" />
 			<fk name="fk_facts_housing_dim_sale" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_sale" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="sale_id" pk="sale_id" />
 			</fk>
@@ -133,16 +119,15 @@
 		</table>
 	</schema>
 	<layout name="Default Layout" id="Layout-1b33" show_relation="columns" >
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_building" color="C1D8EE" x="850" y="510" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_land" color="C1D8EE" x="102" y="340" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_location" color="C1D8EE" x="901" y="221" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_profession" color="C1D8EE" x="102" y="221" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_sale" color="C1D8EE" x="102" y="578" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_school" color="C1D8EE" x="901" y="731" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_seller" color="C1D8EE" x="102" y="459" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_time" color="C1D8EE" x="102" y="714" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="facts_housing" color="C1D8EE" x="425" y="221" />
-		<callout x="51" y="51" pointer="Round" >
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_building" color="C1D8EE" x="848" y="512" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_location" color="C1D8EE" x="896" y="224" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_profession" color="C1D8EE" x="96" y="224" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_sale" color="C1D8EE" x="112" y="480" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_school" color="C1D8EE" x="896" y="736" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_seller" color="C1D8EE" x="96" y="352" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_time" color="C1D8EE" x="128" y="656" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="facts_housing" color="C1D8EE" x="432" y="224" />
+		<callout x="48" y="48" pointer="Round" >
 			<comment><![CDATA[This is a layout - a diagram with tools.
 - Create new entities by right-clicking the layout. 
 - Double-click entity headers to edit.
