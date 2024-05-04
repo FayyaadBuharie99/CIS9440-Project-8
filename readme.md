@@ -49,7 +49,7 @@ Our system is created to assist people who are considering to purchase a house i
 
 
 ### Data Modeling
-<img width="1030" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/a661894a-33b8-4ff9-883a-ec44b46944f8">
+<img width="1030" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Updated%20Data%20Modeling.png?raw=true">
 
 
 ### Methods
