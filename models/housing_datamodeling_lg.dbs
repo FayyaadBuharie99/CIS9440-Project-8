@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="housingNY_dw_lgl" id="LogicalDesign-1d39" database="LogicalDesign" >
 	<schema name="INSTANCE" catalogname="housingNY_dw_lgl" >
-		<table name="dim_building" prior="Entity" >
-			<column name="building_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="building_num_units" type="INT" jt="4" />
-			<column name="building_year_built" type="INT" jt="4" />
-			<column name="building_num_stories" type="INT" jt="4" />
-			<column name="building_num_beds" type="INT" jt="4" />
-			<column name="building_num_baths" type="INT" jt="4" />
-			<column name="building_num_sqft" type="INT" jt="4" />
-			<index name="pk_dim_building" unique="PRIMARY_KEY" >
-				<column name="building_id" />
-			</index>
-		</table>
 		<table name="dim_location" prior="profession_id" >
 			<column name="location_id" type="BIGINT" jt="-5" mandatory="y" />
 			<column name="counties" prior="county" type="VARCHAR" length="255" jt="12" />
@@ -35,13 +23,30 @@
 				<column name="profession_id" />
 			</index>
 		</table>
+		<table name="dim_property" prior="Entity" >
+			<column name="property_ID" type="CHAR" length="255" jt="1" mandatory="y" />
+			<column name="state" type="CHAR" length="255" jt="1" mandatory="y" />
+			<column name="property_zip5" prior="zipcode_id" type="CHAR" length="255" jt="1" mandatory="y" />
+			<column name="PROPERTY_STREET_ADDRESS" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="PROPERTY_CITY" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="PROPERTY_COUNTY" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="PROPERTY_TYPE" type="VARCHAR" length="255" jt="12" />
+			<column name="SALE_PRICE" type="DECIMAL" length="10" jt="3" mandatory="y" />
+			<index name="pk_dim_property" unique="PRIMARY_KEY" >
+				<column name="property_ID" />
+			</index>
+			<index name="unq_zipcode_id" unique="UNIQUE_INDEX" >
+				<column name="property_zip5" />
+			</index>
+		</table>
 		<table name="dim_sale" prior="Entity" >
-			<column name="sale_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="zipcode" prior="proeprty_id" type="INT" jt="4" mandatory="y" />
-			<column name="avg_sale_price" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="sale_id" type="INT" jt="4" mandatory="y" />
+			<column name="property_zip5" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="sale_price" type="BIGINT" jt="-5" mandatory="y" />
 			<column name="min_sale_price" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="max_sale_price" type="BIGINT" jt="-5" mandatory="y" />
-			<index name="pk_dim_sale" unique="PRIMARY_KEY" >
+			<column name="max_sale_price" type="BIGINT" jt="-5" />
+			<column name="avg_sale_price" type="BIGINT" jt="-5" mandatory="y" />
+			<index name="pk_sale_id" unique="PRIMARY_KEY" >
 				<column name="sale_id" />
 			</index>
 		</table>
@@ -55,13 +60,6 @@
 			<column name="rank_stars" type="INT" jt="4" />
 			<index name="pk_dim_school" unique="PRIMARY_KEY" >
 				<column name="school_id" />
-			</index>
-		</table>
-		<table name="dim_seller" prior="dim_" >
-			<column name="seller_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="seller_information" type="VARCHAR" length="255" jt="12" />
-			<index name="pk_dim_seller" unique="PRIMARY_KEY" >
-				<column name="seller_id" />
 			</index>
 		</table>
 		<table name="dim_time" prior="Entity" >
@@ -94,21 +92,22 @@
 			<column name="time_id" type="INT" jt="4" mandatory="y" />
 			<column name="school_id" type="INT" jt="4" />
 			<column name="building_id" type="INT" jt="4" mandatory="y" />
-			<column name="sale_id" prior="property_id" type="INT" jt="4" mandatory="y" />
 			<column name="profession_id" type="INT" jt="4" mandatory="y" />
 			<column name="location_id" type="INT" jt="4" mandatory="y" />
+			<column name="property_id" type="CHAR" length="255" jt="1" mandatory="y" />
+			<column name="sale_id" type="INT" jt="4" mandatory="y" />
+			<index name="pk_property_id" unique="NORMAL" >
+				<column name="property_id" />
+				<column name="sale_id" />
+			</index>
+			<index name="unq_facts_housing_property_id" unique="UNIQUE_KEY" >
+				<column name="property_id" />
+			</index>
 			<fk name="fk_facts_housing_dim_profession" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_profession" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="profession_id" pk="profession_id" />
 			</fk>
-			<fk name="fk_facts_housing_dim_seller" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_seller" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" />
-			<fk name="fk_facts_housing_dim_sale" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_sale" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
-				<fk_column name="sale_id" pk="sale_id" />
-			</fk>
 			<fk name="fk_facts_housing_dim_location" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_location" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="location_id" pk="location_id" />
-			</fk>
-			<fk name="fk_facts_housing_dim_building" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_building" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
-				<fk_column name="building_id" pk="building_id" />
 			</fk>
 			<fk name="fk_facts_housing_dim_time" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_time" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="time_id" pk="time_id" />
@@ -116,16 +115,19 @@
 			<fk name="fk_facts_housing_dim_school" virtual="y" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_school" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="school_id" pk="school_id" />
 			</fk>
+			<fk name="fk_facts_housing_dim_property" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_property" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" />
+			<fk name="fk_facts_housing_dim_sale" to_schema="housingNY_dw_lgl.INSTANCE" to_table="dim_sale" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="sale_id" pk="sale_id" />
+			</fk>
 		</table>
 	</schema>
 	<layout name="Default Layout" id="Layout-1b33" show_relation="columns" >
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_building" color="C1D8EE" x="848" y="512" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_location" color="C1D8EE" x="896" y="224" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_profession" color="C1D8EE" x="96" y="224" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_sale" color="C1D8EE" x="112" y="480" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_school" color="C1D8EE" x="896" y="736" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_seller" color="C1D8EE" x="96" y="352" />
-		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_time" color="C1D8EE" x="128" y="656" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_location" color="C1D8EE" x="880" y="176" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_profession" color="C1D8EE" x="144" y="240" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_property" color="C1D8EE" x="112" y="384" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_sale" color="C1D8EE" x="880" y="448" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_school" color="C1D8EE" x="896" y="656" />
+		<entity schema="housingNY_dw_lgl.INSTANCE" name="dim_time" color="C1D8EE" x="176" y="640" />
 		<entity schema="housingNY_dw_lgl.INSTANCE" name="facts_housing" color="C1D8EE" x="432" y="224" />
 		<callout x="48" y="48" pointer="Round" >
 			<comment><![CDATA[This is a layout - a diagram with tools.
