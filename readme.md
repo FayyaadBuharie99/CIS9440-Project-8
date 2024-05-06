@@ -3,9 +3,13 @@
 
 ## Team Members
 Gabriele DAmelio Sanches
+
 Mohammed Fayyaad Buharie
+
 Jay Ramirez
+
 Chunran Chen
+
 Wilson Cen Wu
 
 
