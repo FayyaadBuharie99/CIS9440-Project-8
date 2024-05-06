@@ -1,6 +1,14 @@
 ### Group 8 - Project 9 - Housing 
 # New York State (all counties) housing datasets 
 
+## Team Members
+Gabriele DAmelio Sanches
+Mohammed Fayyaad Buharie
+Jay Ramirez
+Chunran Chen
+Wilson Cen Wu
+
+
 ## Table of Contents
 
 - [Business Problem](#business-problem)
