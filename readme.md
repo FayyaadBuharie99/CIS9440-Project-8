@@ -81,7 +81,9 @@ We were able to sucessfully clean all of our data in Snowflake and even encounte
 
 After we cleaned all the data in Snowflake, we then used Tableau -- a visualization software to produce results for each of the datasets incorporated into our system. We used different visualization styles such as:
 
-1. Crime Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Crime%20Rate.png">
+1. Crime Data - We visualized the average crime rate by county to display the top five with the highest average crime rate and bottom 5 lowest crimr rate.
+
+<img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Crime%20Rate.png">
 2. School Ranking Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Average%20Sales.png">
 3. Housing Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Average%20Sales.png">
 4. MIT Living Wage Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Cost%20of%20Living.png">
