@@ -53,7 +53,9 @@ Our system is created to assist people who are considering to purchase a house i
 
 
 ### Methods
-We use python scripts to extract the data from each of our datasets, such as: the housing data which contained information about various sales of home from all the states, the crime data which contained information about crime rates in each county, the school ranking data which contained information about the school ranking in each county, and the living wage data which contained information about the living wage in each county. All of the extracted data is then uploaded to a cloud storage -- in our case we opted to utilize Google Cloud Platform to achieve this. Our goal is to perform the ELT as there is a lot of data (namely the housing data), and it would less extensive to transform it.
+We use python scripts to extract the data from each of our datasets, such as: the housing data which contained information about various sales of home from all the states, the crime data which contained information about crime rates in each county, the school ranking data which contained information about the school ranking in each county, and the living wage data which contained information about the living wage in each county. All of the extracted data is then uploaded to a cloud storage -- in our case we opted to utilize Google Cloud Platform to achieve this. Our goal is to perform the ELT as there is a lot of data (namely the housing data), and it would less extensive to transform it. 
+
+We were able to sucessfully clean all of our data in Snowflake and even encountered issues that were resolved, such as Property ID and Sales ID only containing null values, so we generated our set of numbers to improve data integrity. We joined all the dimensions along with the columns pertaning to the facts in our data model to create a facts table in snowflake whose dta is joined by the specfifc dimension such dim_sales, dim_profession, dim_property etc. The culmination of thesse joins made it easier to send the data to tableau and visualize it as without any trouble.
 
 
 ### Data Tools
@@ -63,5 +65,11 @@ We use python scripts to extract the data from each of our datasets, such as: th
 4.  Tableau - to visualize the data by utilizing the data from the data warehouse.
 
 
-### Interface
-NEED TO DO ##The final interface will be a web-based application where the Persona can visualize the results.  People should be able also to connect to your  data using Tableau/PowerBI and do their own analysis. ##
+### Visual Interface
+
+After we cleaned all the data in Snowflake, we then used Tableau -- a visualization software to produce results for each of the datasets incorporated into our system. We used different visualization styles such as:
+
+1. Crime Data - 
+2. School Ranking Data - 
+3. Housing Data - 
+4. MIT Living Wage Data - 
