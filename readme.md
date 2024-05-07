@@ -85,7 +85,7 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 
 <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Crime%20Rate.png">
 
-2. School Ranking Data - This shows a line graph of the highest school ranks in each county
+2. School Ranking Data - This shows a line graph of the average school ranks in each county
 
 <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/School%20Ranks.png">
 
