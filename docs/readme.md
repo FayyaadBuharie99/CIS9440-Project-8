@@ -3,3 +3,4 @@ This folder contains the documents that we created for our project:
 2. Data Dictionary: Housing data
 3. Data Dictionary: School Rankings data 
 4. Data Dictionary: Crime Rate
+5. Visualizations: Tableau notebook
