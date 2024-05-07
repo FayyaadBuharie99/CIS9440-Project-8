@@ -81,7 +81,7 @@ We were able to sucessfully clean all of our data in Snowflake and even encounte
 
 After we cleaned all the data in Snowflake, we then used Tableau -- a visualization software to produce results for each of the datasets incorporated into our system. We used different visualization styles such as:
 
-1. Crime Data - 
+1. Crime Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://raw.githubusercontent.com/FayyaadBuharie99/CIS9440-Project-8/main/models/Updated%20Data%20Modeling.png">
 2. School Ranking Data - 
 3. Housing Data - 
 4. MIT Living Wage Data - 
