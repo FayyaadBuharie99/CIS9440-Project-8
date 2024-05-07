@@ -1,0 +1,3087 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0909.1159                               -->
+<workbook original-version='18.1' source-build='2023.2.2 (20232.23.0909.1159)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)+ (HOUSINGNY)' inline='true' name='federated.1br03rn1wtztl210ka7pu0pzslsu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tilmwpx-rma66037.snowflakecomputing.com' name='snowflake.01gfi871bhztww1b9k94m1k335vm'>
+            <connection authentication='Username Password' class='snowflake' dbname='HOUSING_CIS9440' odbc-connect-string-extras='' one-time-sql='' schema='HOUSINGNY' server='tilmwpx-rma66037.snowflakecomputing.com' service='' username='GABRIELEDASANCHES' warehouse='HOMEWORK_CIS9440' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_LOCATION' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_LOCATION]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='FACTS_HOUSING3' table='[HOUSING_CIS9440].[HOUSINGNY].[FACTS_HOUSING3]' type='table' />
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_LOCATION' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_LOCATION]' type='table' />
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_PROFESSION' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_PROFESSION]' type='table' />
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_PROPERTY' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_PROPERTY]' type='table' />
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_SALE' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_SALE]' type='table' />
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_SCHOOL' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_SCHOOL]' type='table' />
+          <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_TIME' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_TIME]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[AGGREVATED_ASSAULT_COUNT]' value='[FACTS_HOUSING3].[AGGREVATED_ASSAULT_COUNT]' />
+          <map key='[AVG_SALE_PRICE]' value='[DIM_SALE].[AVG_SALE_PRICE]' />
+          <map key='[BUILDING_APPRAISED_VALUE]' value='[FACTS_HOUSING3].[BUILDING_APPRAISED_VALUE]' />
+          <map key='[BUILDING_ASSESSED_VALUE]' value='[FACTS_HOUSING3].[BUILDING_ASSESSED_VALUE]' />
+          <map key='[BURGLARY_COUNT]' value='[FACTS_HOUSING3].[BURGLARY_COUNT]' />
+          <map key='[CITY]' value='[DIM_LOCATION].[CITY]' />
+          <map key='[COUNTIES]' value='[DIM_LOCATION].[COUNTIES]' />
+          <map key='[FACTS_ID]' value='[FACTS_HOUSING3].[FACTS_ID]' />
+          <map key='[HIGH_GRADE]' value='[DIM_SCHOOL].[HIGH_GRADE]' />
+          <map key='[INDEX_TOTAL_COUNT]' value='[FACTS_HOUSING3].[INDEX_TOTAL_COUNT]' />
+          <map key='[IS_PRIVATE]' value='[DIM_SCHOOL].[IS_PRIVATE]' />
+          <map key='[LAND_APPRAISED_VALUE]' value='[FACTS_HOUSING3].[LAND_APPRAISED_VALUE]' />
+          <map key='[LAND_ASSESSED_VALUE]' value='[FACTS_HOUSING3].[LAND_ASSESSED_VALUE]' />
+          <map key='[LARCENY_COUNT]' value='[FACTS_HOUSING3].[LARCENY_COUNT]' />
+          <map key='[LIVING_EXPENSES]' value='[FACTS_HOUSING3].[LIVING_EXPENSES]' />
+          <map key='[LIVING_WAGE]' value='[FACTS_HOUSING3].[LIVING_WAGE]' />
+          <map key='[LOCATION_ID (DIM_LOCATION)]' value='[DIM_LOCATION].[LOCATION_ID]' />
+          <map key='[LOCATION_ID]' value='[FACTS_HOUSING3].[LOCATION_ID]' />
+          <map key='[LOW_GRADE]' value='[DIM_SCHOOL].[LOW_GRADE]' />
+          <map key='[MAX_SALE_PRICE]' value='[DIM_SALE].[MAX_SALE_PRICE]' />
+          <map key='[MINIMUM_WAGE]' value='[FACTS_HOUSING3].[MINIMUM_WAGE]' />
+          <map key='[MIN_SALE_PRICE]' value='[DIM_SALE].[MIN_SALE_PRICE]' />
+          <map key='[MURDER_COUNTRAPE_COUNT]' value='[FACTS_HOUSING3].[MURDER_COUNTRAPE_COUNT]' />
+          <map key='[MV_THEFT_COUNT]' value='[FACTS_HOUSING3].[MV_THEFT_COUNT]' />
+          <map key='[POPULATION_NUM]' value='[FACTS_HOUSING3].[POPULATION_NUM]' />
+          <map key='[POVERTY_WAGE]' value='[FACTS_HOUSING3].[POVERTY_WAGE]' />
+          <map key='[PROFESSION_ID (DIM_PROFESSION)]' value='[DIM_PROFESSION].[PROFESSION_ID]' />
+          <map key='[PROFESSION_ID]' value='[FACTS_HOUSING3].[PROFESSION_ID]' />
+          <map key='[PROFESSION_TITLE]' value='[DIM_PROFESSION].[PROFESSION_TITLE]' />
+          <map key='[PROPERTY_CITY]' value='[DIM_PROPERTY].[PROPERTY_CITY]' />
+          <map key='[PROPERTY_COUNTY]' value='[DIM_PROPERTY].[PROPERTY_COUNTY]' />
+          <map key='[PROPERTY_ID (DIM_PROPERTY)]' value='[DIM_PROPERTY].[PROPERTY_ID]' />
+          <map key='[PROPERTY_ID]' value='[FACTS_HOUSING3].[PROPERTY_ID]' />
+          <map key='[PROPERTY_STREET_ADDRESS]' value='[DIM_PROPERTY].[PROPERTY_STREET_ADDRESS]' />
+          <map key='[PROPERTY_TOTAL_COUNT]' value='[FACTS_HOUSING3].[PROPERTY_TOTAL_COUNT]' />
+          <map key='[PROPERTY_TYPE]' value='[DIM_PROPERTY].[PROPERTY_TYPE]' />
+          <map key='[PROPERTY_ZIP5 (DIM_PROPERTY)]' value='[DIM_PROPERTY].[PROPERTY_ZIP5]' />
+          <map key='[PROPERTY_ZIP5]' value='[DIM_SALE].[PROPERTY_ZIP5]' />
+          <map key='[PUPIL_TEACHER_RATIO]' value='[FACTS_HOUSING3].[PUPIL_TEACHER_RATIO]' />
+          <map key='[RANK_STARS]' value='[DIM_SCHOOL].[RANK_STARS]' />
+          <map key='[ROBBERY_COUNT]' value='[FACTS_HOUSING3].[ROBBERY_COUNT]' />
+          <map key='[SALE_ID (DIM_SALE)]' value='[DIM_SALE].[SALE_ID]' />
+          <map key='[SALE_ID]' value='[FACTS_HOUSING3].[SALE_ID]' />
+          <map key='[SALE_PRICE (DIM_PROPERTY)]' value='[DIM_PROPERTY].[SALE_PRICE]' />
+          <map key='[SALE_PRICE (DIM_SALE)]' value='[DIM_SALE].[SALE_PRICE]' />
+          <map key='[SALE_PRICE]' value='[FACTS_HOUSING3].[SALE_PRICE]' />
+          <map key='[SCHOOL_ID (DIM_SCHOOL)]' value='[DIM_SCHOOL].[SCHOOL_ID]' />
+          <map key='[SCHOOL_ID]' value='[FACTS_HOUSING3].[SCHOOL_ID]' />
+          <map key='[SCHOOL_LEVEL]' value='[DIM_SCHOOL].[SCHOOL_LEVEL]' />
+          <map key='[SCHOOL_NAME]' value='[DIM_SCHOOL].[SCHOOL_NAME]' />
+          <map key='[STATE]' value='[DIM_PROPERTY].[STATE]' />
+          <map key='[STATE_NAME]' value='[DIM_LOCATION].[STATE_NAME]' />
+          <map key='[STREET_ADDRESS]' value='[DIM_LOCATION].[STREET_ADDRESS]' />
+          <map key='[TIME_ID (DIM_TIME)]' value='[DIM_TIME].[TIME_ID]' />
+          <map key='[TIME_ID]' value='[FACTS_HOUSING3].[TIME_ID]' />
+          <map key='[TYPICAL_ANNUAL__SALARY]' value='[FACTS_HOUSING3].[TYPICAL_ANNUAL__SALARY]' />
+          <map key='[VIOLENT_TOTAL_COUNT]' value='[FACTS_HOUSING3].[VIOLENT_TOTAL_COUNT]' />
+          <map key='[YEAR_NUM]' value='[DIM_TIME].[YEAR_NUM]' />
+          <map key='[ZIP_CODE]' value='[DIM_LOCATION].[ZIP_CODE]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>FACTS_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[FACTS_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>FACTS_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIVING_WAGE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LIVING_WAGE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>LIVING_WAGE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>8</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POVERTY_WAGE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[POVERTY_WAGE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>POVERTY_WAGE</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>8</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MINIMUM_WAGE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[MINIMUM_WAGE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>MINIMUM_WAGE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>8</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIVING_EXPENSES</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LIVING_EXPENSES]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>LIVING_EXPENSES</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TYPICAL_ANNUAL__SALARY</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TYPICAL_ANNUAL__SALARY]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>TYPICAL_ANNUAL__SALARY</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUILDING_ASSESSED_VALUE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[BUILDING_ASSESSED_VALUE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>BUILDING_ASSESSED_VALUE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUILDING_APPRAISED_VALUE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[BUILDING_APPRAISED_VALUE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>BUILDING_APPRAISED_VALUE</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE_PRICE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[SALE_PRICE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>SALE_PRICE</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>12</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAND_APPRAISED_VALUE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LAND_APPRAISED_VALUE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>LAND_APPRAISED_VALUE</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAND_ASSESSED_VALUE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LAND_ASSESSED_VALUE]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>LAND_ASSESSED_VALUE</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POPULATION_NUM</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[POPULATION_NUM]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>POPULATION_NUM</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INDEX_TOTAL_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[INDEX_TOTAL_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>INDEX_TOTAL_COUNT</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VIOLENT_TOTAL_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[VIOLENT_TOTAL_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>VIOLENT_TOTAL_COUNT</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MURDER_COUNTRAPE_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[MURDER_COUNTRAPE_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>MURDER_COUNTRAPE_COUNT</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROBBERY_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[ROBBERY_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>ROBBERY_COUNT</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGGREVATED_ASSAULT_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AGGREVATED_ASSAULT_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>AGGREVATED_ASSAULT_COUNT</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_TOTAL_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PROPERTY_TOTAL_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>PROPERTY_TOTAL_COUNT</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BURGLARY_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[BURGLARY_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>BURGLARY_COUNT</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LARCENY_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LARCENY_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>LARCENY_COUNT</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MV_THEFT_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[MV_THEFT_COUNT]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>MV_THEFT_COUNT</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PUPIL_TEACHER_RATIO</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PUPIL_TEACHER_RATIO]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>PUPIL_TEACHER_RATIO</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TIME_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TIME_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>TIME_ID</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHOOL_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[SCHOOL_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>SCHOOL_ID</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[SALE_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>SALE_ID</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROFESSION_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PROFESSION_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>PROFESSION_ID</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LOCATION_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LOCATION_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>LOCATION_ID</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_ID]</local-name>
+            <parent-name>[FACTS_HOUSING3]</parent-name>
+            <remote-alias>PROPERTY_ID</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LOCATION_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LOCATION_ID (DIM_LOCATION)]</local-name>
+            <parent-name>[DIM_LOCATION]</parent-name>
+            <remote-alias>LOCATION_ID</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTIES</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTIES]</local-name>
+            <parent-name>[DIM_LOCATION]</parent-name>
+            <remote-alias>COUNTIES</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP_CODE</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[ZIP_CODE]</local-name>
+            <parent-name>[DIM_LOCATION]</parent-name>
+            <remote-alias>ZIP_CODE</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE_NAME]</local-name>
+            <parent-name>[DIM_LOCATION]</parent-name>
+            <remote-alias>STATE_NAME</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CITY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CITY]</local-name>
+            <parent-name>[DIM_LOCATION]</parent-name>
+            <remote-alias>CITY</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STREET_ADDRESS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STREET_ADDRESS]</local-name>
+            <parent-name>[DIM_LOCATION]</parent-name>
+            <remote-alias>STREET_ADDRESS</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROFESSION_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PROFESSION_ID (DIM_PROFESSION)]</local-name>
+            <parent-name>[DIM_PROFESSION]</parent-name>
+            <remote-alias>PROFESSION_ID</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROFESSION (HOUSING_CIS9440.DIM_PROFESSION)_68FE243086A94F98A5ABA00865BA3080]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROFESSION_TITLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROFESSION_TITLE]</local-name>
+            <parent-name>[DIM_PROFESSION]</parent-name>
+            <remote-alias>PROFESSION_TITLE</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROFESSION (HOUSING_CIS9440.DIM_PROFESSION)_68FE243086A94F98A5ABA00865BA3080]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_ID (DIM_PROPERTY)]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>PROPERTY_ID</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_ZIP5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_ZIP5 (DIM_PROPERTY)]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>PROPERTY_ZIP5</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_STREET_ADDRESS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_STREET_ADDRESS]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>PROPERTY_STREET_ADDRESS</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_CITY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_CITY]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>PROPERTY_CITY</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_COUNTY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_COUNTY]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>PROPERTY_COUNTY</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_TYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_TYPE]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>PROPERTY_TYPE</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE_PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SALE_PRICE (DIM_PROPERTY)]</local-name>
+            <parent-name>[DIM_PROPERTY]</parent-name>
+            <remote-alias>SALE_PRICE</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[SALE_ID (DIM_SALE)]</local-name>
+            <parent-name>[DIM_SALE]</parent-name>
+            <remote-alias>SALE_ID</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_ZIP5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_ZIP5]</local-name>
+            <parent-name>[DIM_SALE]</parent-name>
+            <remote-alias>PROPERTY_ZIP5</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16777216</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE_PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SALE_PRICE (DIM_SALE)]</local-name>
+            <parent-name>[DIM_SALE]</parent-name>
+            <remote-alias>SALE_PRICE</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MIN_SALE_PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MIN_SALE_PRICE]</local-name>
+            <parent-name>[DIM_SALE]</parent-name>
+            <remote-alias>MIN_SALE_PRICE</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MAX_SALE_PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MAX_SALE_PRICE]</local-name>
+            <parent-name>[DIM_SALE]</parent-name>
+            <remote-alias>MAX_SALE_PRICE</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_SALE_PRICE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_SALE_PRICE]</local-name>
+            <parent-name>[DIM_SALE]</parent-name>
+            <remote-alias>AVG_SALE_PRICE</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHOOL_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[SCHOOL_ID (DIM_SCHOOL)]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>SCHOOL_ID</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHOOL_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SCHOOL_NAME]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>SCHOOL_NAME</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IS_PRIVATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IS_PRIVATE]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>IS_PRIVATE</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SCHOOL_LEVEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SCHOOL_LEVEL]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>SCHOOL_LEVEL</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LOW_GRADE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LOW_GRADE]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>LOW_GRADE</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HIGH_GRADE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HIGH_GRADE]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>HIGH_GRADE</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RANK_STARS</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[RANK_STARS]</local-name>
+            <parent-name>[DIM_SCHOOL]</parent-name>
+            <remote-alias>RANK_STARS</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TIME_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TIME_ID (DIM_TIME)]</local-name>
+            <parent-name>[DIM_TIME]</parent-name>
+            <remote-alias>TIME_ID</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_TIME (HOUSING_CIS9440.DIM_TIME)_75B6872058384D1489A16512C2B63B21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR_NUM</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[YEAR_NUM]</local-name>
+            <parent-name>[DIM_TIME]</parent-name>
+            <remote-alias>YEAR_NUM</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIM_TIME (HOUSING_CIS9440.DIM_TIME)_75B6872058384D1489A16512C2B63B21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Aggrevated Assault Count' datatype='integer' name='[AGGREVATED_ASSAULT_COUNT]' role='measure' type='quantitative' />
+      <column caption='Avg Sale Price' datatype='real' name='[AVG_SALE_PRICE]' role='measure' type='quantitative' />
+      <column caption='Building Appraised Value' datatype='real' name='[BUILDING_APPRAISED_VALUE]' role='measure' type='quantitative' />
+      <column caption='Building Assessed Value' datatype='real' name='[BUILDING_ASSESSED_VALUE]' role='measure' type='quantitative' />
+      <column caption='Burglary Count' datatype='integer' name='[BURGLARY_COUNT]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Counties' datatype='string' name='[COUNTIES]' role='dimension' type='nominal' />
+      <column caption='Facts Id' datatype='integer' name='[FACTS_ID]' role='dimension' type='ordinal' />
+      <column caption='High Grade' datatype='string' name='[HIGH_GRADE]' role='dimension' type='nominal' />
+      <column caption='Index Total Count' datatype='integer' name='[INDEX_TOTAL_COUNT]' role='measure' type='quantitative' />
+      <column caption='Is Private' datatype='string' name='[IS_PRIVATE]' role='dimension' type='nominal' />
+      <column caption='Land Appraised Value' datatype='real' name='[LAND_APPRAISED_VALUE]' role='measure' type='quantitative' />
+      <column caption='Land Assessed Value' datatype='real' name='[LAND_ASSESSED_VALUE]' role='measure' type='quantitative' />
+      <column caption='Larceny Count' datatype='integer' name='[LARCENY_COUNT]' role='measure' type='quantitative' />
+      <column caption='Living Expenses' datatype='real' name='[LIVING_EXPENSES]' role='measure' type='quantitative' />
+      <column caption='Living Wage' datatype='real' name='[LIVING_WAGE]' role='measure' type='quantitative' />
+      <column caption='Location Id (Dim Location)' datatype='integer' name='[LOCATION_ID (DIM_LOCATION)]' role='dimension' type='ordinal' />
+      <column caption='Location Id' datatype='integer' name='[LOCATION_ID]' role='dimension' type='ordinal' />
+      <column caption='Low Grade' datatype='string' name='[LOW_GRADE]' role='dimension' type='nominal' />
+      <column caption='Max Sale Price' datatype='real' name='[MAX_SALE_PRICE]' role='measure' type='quantitative' />
+      <column caption='Minimum Wage' datatype='real' name='[MINIMUM_WAGE]' role='measure' type='quantitative' />
+      <column caption='Min Sale Price' datatype='real' name='[MIN_SALE_PRICE]' role='measure' type='quantitative' />
+      <column caption='Murder Countrape Count' datatype='integer' name='[MURDER_COUNTRAPE_COUNT]' role='measure' type='quantitative' />
+      <column caption='Mv Theft Count' datatype='integer' name='[MV_THEFT_COUNT]' role='measure' type='quantitative' />
+      <column caption='Population Num' datatype='integer' name='[POPULATION_NUM]' role='dimension' type='ordinal' />
+      <column caption='Poverty Wage' datatype='real' name='[POVERTY_WAGE]' role='measure' type='quantitative' />
+      <column caption='Profession Id (Dim Profession)' datatype='integer' name='[PROFESSION_ID (DIM_PROFESSION)]' role='dimension' type='ordinal' />
+      <column caption='Profession Id' datatype='integer' name='[PROFESSION_ID]' role='dimension' type='ordinal' />
+      <column caption='Profession Title' datatype='string' name='[PROFESSION_TITLE]' role='dimension' type='nominal' />
+      <column caption='Property City' datatype='string' name='[PROPERTY_CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Property County' datatype='string' name='[PROPERTY_COUNTY]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Property Id (Dim Property)' datatype='string' name='[PROPERTY_ID (DIM_PROPERTY)]' role='dimension' type='nominal' />
+      <column caption='Property Id' datatype='string' name='[PROPERTY_ID]' role='dimension' type='nominal' />
+      <column caption='Property Street Address' datatype='string' name='[PROPERTY_STREET_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Property Total Count' datatype='integer' name='[PROPERTY_TOTAL_COUNT]' role='measure' type='quantitative' />
+      <column caption='Property Type' datatype='string' name='[PROPERTY_TYPE]' role='dimension' type='nominal' />
+      <column caption='Property Zip5 (Dim Property)' datatype='string' name='[PROPERTY_ZIP5 (DIM_PROPERTY)]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Property Zip5' datatype='string' name='[PROPERTY_ZIP5]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Pupil Teacher Ratio' datatype='integer' name='[PUPIL_TEACHER_RATIO]' role='measure' type='quantitative' />
+      <column caption='Rank Stars' datatype='integer' name='[RANK_STARS]' role='measure' type='quantitative' />
+      <column caption='Robbery Count' datatype='integer' name='[ROBBERY_COUNT]' role='measure' type='quantitative' />
+      <column caption='Sale Id (Dim Sale)' datatype='integer' name='[SALE_ID (DIM_SALE)]' role='dimension' type='ordinal' />
+      <column caption='Sale Id' datatype='integer' name='[SALE_ID]' role='dimension' type='ordinal' />
+      <column caption='Sale Price (Dim Property)' datatype='real' name='[SALE_PRICE (DIM_PROPERTY)]' role='measure' type='quantitative' />
+      <column caption='Sale Price (Dim Sale)' datatype='real' name='[SALE_PRICE (DIM_SALE)]' role='measure' type='quantitative' />
+      <column caption='Sale Price' datatype='real' name='[SALE_PRICE]' role='measure' type='quantitative' />
+      <column caption='School Id (Dim School)' datatype='integer' name='[SCHOOL_ID (DIM_SCHOOL)]' role='dimension' type='ordinal' />
+      <column caption='School Id' datatype='integer' name='[SCHOOL_ID]' role='dimension' type='ordinal' />
+      <column caption='School Level' datatype='string' name='[SCHOOL_LEVEL]' role='dimension' type='nominal' />
+      <column caption='School Name' datatype='string' name='[SCHOOL_NAME]' role='dimension' type='nominal' />
+      <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State Name' datatype='string' name='[STATE_NAME]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Street Address' datatype='string' name='[STREET_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Time Id (Dim Time)' datatype='integer' name='[TIME_ID (DIM_TIME)]' role='dimension' type='ordinal' />
+      <column caption='Time Id' datatype='integer' name='[TIME_ID]' role='dimension' type='ordinal' />
+      <column caption='Typical_Annual__Salary' datatype='real' name='[TYPICAL_ANNUAL__SALARY]' role='measure' type='quantitative' />
+      <column caption='Violent Total Count' datatype='integer' name='[VIOLENT_TOTAL_COUNT]' role='measure' type='quantitative' />
+      <column caption='Year Num' datatype='integer' name='[YEAR_NUM]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' caption='Zip Code' datatype='integer' default-format='*00000' name='[ZIP_CODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIM_LOCATION' datatype='table' name='[__tableau_internal_object_id__].[DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIM_PROFESSION' datatype='table' name='[__tableau_internal_object_id__].[DIM_PROFESSION (HOUSING_CIS9440.DIM_PROFESSION)_68FE243086A94F98A5ABA00865BA3080]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIM_PROPERTY' datatype='table' name='[__tableau_internal_object_id__].[DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIM_SALE' datatype='table' name='[__tableau_internal_object_id__].[DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIM_SCHOOL' datatype='table' name='[__tableau_internal_object_id__].[DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIM_TIME' datatype='table' name='[__tableau_internal_object_id__].[DIM_TIME (HOUSING_CIS9440.DIM_TIME)_75B6872058384D1489A16512C2B63B21]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='FACTS_HOUSING3' datatype='table' name='[__tableau_internal_object_id__].[FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='DIM_LOCATION' id='DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_LOCATION' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_LOCATION]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_PROFESSION' id='DIM_PROFESSION (HOUSING_CIS9440.DIM_PROFESSION)_68FE243086A94F98A5ABA00865BA3080'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_PROFESSION' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_PROFESSION]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_PROPERTY' id='DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_PROPERTY' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_PROPERTY]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_SALE' id='DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_SALE' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_SALE]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_SCHOOL' id='DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_SCHOOL' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_SCHOOL]' type='table' />
+            </properties>
+          </object>
+          <object caption='DIM_TIME' id='DIM_TIME (HOUSING_CIS9440.DIM_TIME)_75B6872058384D1489A16512C2B63B21'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='DIM_TIME' table='[HOUSING_CIS9440].[HOUSINGNY].[DIM_TIME]' type='table' />
+            </properties>
+          </object>
+          <object caption='FACTS_HOUSING3' id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8'>
+            <properties context=''>
+              <relation connection='snowflake.01gfi871bhztww1b9k94m1k335vm' name='FACTS_HOUSING3' table='[HOUSING_CIS9440].[HOUSINGNY].[FACTS_HOUSING3]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[LOCATION_ID]' />
+              <expression op='[LOCATION_ID (DIM_LOCATION)]' />
+            </expression>
+            <first-end-point object-id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='DIM_LOCATION (HOUSING_CIS9440.DIM_LOCATION)_962D3CA440DE4AE581C9169D74F63ED7' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[PROFESSION_ID]' />
+              <expression op='[PROFESSION_ID (DIM_PROFESSION)]' />
+            </expression>
+            <first-end-point object-id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='DIM_PROFESSION (HOUSING_CIS9440.DIM_PROFESSION)_68FE243086A94F98A5ABA00865BA3080' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[PROPERTY_ID]' />
+              <expression op='[PROPERTY_ID (DIM_PROPERTY)]' />
+            </expression>
+            <first-end-point object-id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='DIM_PROPERTY (HOUSING_CIS9440.DIM_PROPERTY)_4E5DE7713A4C46A2BC68175C5D58DC72' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[SALE_ID]' />
+              <expression op='[SALE_ID (DIM_SALE)]' />
+            </expression>
+            <first-end-point object-id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='DIM_SALE (HOUSING_CIS9440.DIM_SALE)_04BE2B23BD564448891B3932CC43A404' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[SCHOOL_ID]' />
+              <expression op='[SCHOOL_ID (DIM_SCHOOL)]' />
+            </expression>
+            <first-end-point object-id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='DIM_SCHOOL (HOUSING_CIS9440.DIM_SCHOOL)_8709CB123F8E4C7BA8177F5761D5CF2F' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[TIME_ID]' />
+              <expression op='[TIME_ID (DIM_TIME)]' />
+            </expression>
+            <first-end-point object-id='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)_0870B73B135F44C8B751B39C6E34E3F8' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='DIM_TIME (HOUSING_CIS9440.DIM_TIME)_75B6872058384D1489A16512C2B63B21' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Cost of living'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average living expenses per county</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)+ (HOUSINGNY)' name='federated.1br03rn1wtztl210ka7pu0pzslsu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1br03rn1wtztl210ka7pu0pzslsu'>
+            <column caption='Counties' datatype='string' name='[COUNTIES]' role='dimension' type='nominal' />
+            <column caption='Living Expenses' datatype='real' name='[LIVING_EXPENSES]' role='measure' type='quantitative' />
+            <column caption='Typical_Annual__Salary' datatype='real' name='[TYPICAL_ANNUAL__SALARY]' role='measure' type='quantitative' />
+            <column-instance column='[LIVING_EXPENSES]' derivation='Avg' name='[avg:LIVING_EXPENSES:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TYPICAL_ANNUAL__SALARY]' derivation='Min' name='[min:TYPICAL_ANNUAL__SALARY:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[COUNTIES]' derivation='None' name='[none:COUNTIES:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]' included-values='in-range'>
+            <min>33800.0</min>
+            <max>57343.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1br03rn1wtztl210ka7pu0pzslsu].[min:TYPICAL_ANNUAL__SALARY:qk]' included-values='in-range' />
+          <filter class='categorical' column='[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:COUNTIES:nk]' />
+              <groupfilter function='except'>
+                <groupfilter function='level-members' level='[none:COUNTIES:nk]' />
+                <groupfilter function='union'>
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Cattaraugus County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Chautauqua County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Chenango County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Essex County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Franklin County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Fulton County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Kings County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Lewis County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Mid-Hudson County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;New York County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Putnam County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Queens County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Queens County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Richmond County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Richmond County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Rockland County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;St. Lawrence County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Unknown  County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='%null%' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</column>
+            <column>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</column>
+            <column>[federated.1br03rn1wtztl210ka7pu0pzslsu].[min:TYPICAL_ANNUAL__SALARY:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]' field-type='quantitative' major-origin='0.0' major-spacing='5000.0' max='65000.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</rows>
+        <cols>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>57343.0</value>
+                <value>&quot;Putnam County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>57145.0</value>
+                <value>&quot;New York County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>56154.0</value>
+                <value>&quot;Rockland County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>54393.0</value>
+                <value>&quot;Queens County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>53213.0</value>
+                <value>&quot;Richmond County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>51323.0</value>
+                <value>&quot;Kings County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>35179.0</value>
+                <value>&quot;Fulton County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>34765.0</value>
+                <value>&quot;Chenango County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>34732.0</value>
+                <value>&quot;Mid-Hudson County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>34732.0</value>
+                <value>&quot;Cattaraugus County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>34712.0</value>
+                <value>&quot;Franklin County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:LIVING_EXPENSES:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>33800.0</value>
+                <value>&quot;Chautauqua County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{92FB531F-990B-4962-9AE0-A27A41EC4A1C}' />
+    </worksheet>
+    <worksheet name='House sales price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average house sales price per county</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACTS_HOUSING3 (HOUSING_CIS9440.FACTS_HOUSING3)+ (HOUSINGNY)' name='federated.1br03rn1wtztl210ka7pu0pzslsu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1br03rn1wtztl210ka7pu0pzslsu'>
+            <column caption='Counties' datatype='string' name='[COUNTIES]' role='dimension' type='nominal' />
+            <column caption='Sale Price' datatype='real' name='[SALE_PRICE]' role='measure' type='quantitative' />
+            <column-instance column='[SALE_PRICE]' derivation='Avg' name='[avg:SALE_PRICE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[COUNTIES]' derivation='None' name='[none:COUNTIES:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]' included-values='non-null' />
+          <filter class='categorical' column='[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:COUNTIES:nk]' />
+              <groupfilter function='except'>
+                <groupfilter function='level-members' level='[none:COUNTIES:nk]' />
+                <groupfilter function='union'>
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Albany County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Allegany County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Bronx County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Bronx County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Capital Region County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Central NY County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Chenango County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Cortland County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Dutchess County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Erie County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Essex County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Finger Lakes County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Kings County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Lewis County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Nassau County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;New York County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Ontario County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Otsego County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Queens County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Queens County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Richmond County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Richmond County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Rockland County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Schoharie County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;St. Lawrence County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Steuben County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Suffolk County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Unknown  County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Unknown County County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='&quot;Westchester County&quot;' />
+                  <groupfilter function='member' level='[none:COUNTIES:nk]' member='%null%' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</column>
+            <column>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]' field-type='quantitative' major-origin='0.0' major-spacing='100000.0' max='1670770.5805861738' min='0.0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</rows>
+        <cols>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>110469.52941176</value>
+                <value>&quot;Allegany County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>110469.52941176</value>
+                <value>&quot;Central NY County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>115914.28571429</value>
+                <value>&quot;Chenango County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>121643.16666667</value>
+                <value>&quot;Cortland County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>170157.28571428999</value>
+                <value>&quot;Tioga County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>172053.0</value>
+                <value>&quot;Schuyler County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>174036.52631578999</value>
+                <value>&quot;Fulton County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>181115.11111110999</value>
+                <value>&quot;Schoharie County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>192211.87619047999</value>
+                <value>&quot;Chautauqua County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>193024.76666667001</value>
+                <value>&quot;Wyoming County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>208110.0</value>
+                <value>&quot;Madison County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>220583.33333333</value>
+                <value>&quot;Yates County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>222399.48275862</value>
+                <value>&quot;Rensselaer County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>234447.41964286001</value>
+                <value>&quot;Niagara County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='19' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>268458.17948718002</value>
+                <value>&quot;Southern Tier County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='20' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>305688.66141732002</value>
+                <value>&quot;Tompkins County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='21' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>305912.18269231002</value>
+                <value>&quot;Putnam County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='22' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>350205.51428571</value>
+                <value>&quot;Saratoga County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='23' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>351235.81707316998</value>
+                <value>&quot;Greene County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='24' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>357223.76612902997</value>
+                <value>&quot;Orange County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='25' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>380701.47118156002</value>
+                <value>&quot;Erie County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='26' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>414265.83809524</value>
+                <value>&quot;Dutchess County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='27' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>424582.86666667002</value>
+                <value>&quot;Otsego County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='28' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>446975.68795534002</value>
+                <value>&quot;Bronx County County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='29' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>552204.82692308002</value>
+                <value>&quot;Richmond County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='30' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>743079.24170498003</value>
+                <value>&quot;Unknown County County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='31' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>745553.25287355995</value>
+                <value>&quot;Ontario County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='32' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>775387.28735631995</value>
+                <value>&quot;Albany County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='33' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>775387.28735631995</value>
+                <value>&quot;Capital Region County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='34' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>843777.88321167999</value>
+                <value>&quot;Queens County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='35' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>880723.97482377</value>
+                <value>&quot;Nassau County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='36' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>981147.61991218</value>
+                <value>&quot;Kings County County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='37' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1012158.17280917</value>
+                <value>&quot;Suffolk County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='38' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1055010.6452991499</value>
+                <value>&quot;Rockland County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='39' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1306178.57142857</value>
+                <value>&quot;Bronx County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='40' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1306178.57142857</value>
+                <value>&quot;Finger Lakes County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='41' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1349258.1046891999</value>
+                <value>&quot;Westchester County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='42' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1536470.0909090899</value>
+                <value>&quot;Steuben County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='43' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[avg:SALE_PRICE:qk]</field>
+                  <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1588800.36931818</value>
+                <value>&quot;New York County&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{B25AD562-DE52-4F91-BD7D-BFE60EF8AB3B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Cost of living'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1br03rn1wtztl210ka7pu0pzslsu].[min:TYPICAL_ANNUAL__SALARY:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:CITY:nk]</field>
+            <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3F7E56A2-CDAD-4E5A-BC35-163EDDB057B1}' />
+    </window>
+    <window class='worksheet' maximized='true' name='House sales price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1br03rn1wtztl210ka7pu0pzslsu].[none:COUNTIES:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2611AAE7-F513-4FF2-AC9B-04AAB4904E9E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Cost of living' width='192'>
+      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
+      j55g+7V1AdCKGyyurOHz+Wqrh+ryEIls3ckhGNjbLN5CHEd1MSlt5NgoVahWdSdv9YVD1G0B
+      2rr7uPaNPgxdAiBefc+93EeVXRzhADJRtnA0CYBwNAmAcDQJgHA0CYBwNAmAcDQJgHA0CYBw
+      NAmAcDQJgHA0CYBwNAmAcDQJgHA0Szd/q5QKTM3MEQi0UdQNuiNtaJpGNCp3jxDNzVIA3F4f
+      oWAQUzGpFsqsLs/hC0W3muG/mBlSt9H8bGJSrW7fdchO47Rp7qP22eXaaLrez3KNZ2ttNMU/
+      W2vHl3M2761Wr9Xqus3mdH1nrb3bq+2nVt9Za1irtRSAYi7N+kaR7vY2VFUl2pugUta25nQ1
+      TVwuFy4bvZ8KCm739qLt9K0qyj5qn12ujZ7T/SxXfbbWRk/ws7V2qKq6j1pXrdYw7a2Iqmu7
+      1uWyF8DdtfZ6Ulw7a1VrtZbendZIN1+NbM103ttra0xCHGtyECwcTQIgHE0CIBxNAiAcTQIg
+      HE0CIBxNAiAcTQIgHE0CIBxNAiAcTQIgHE0CIBxNAiAcTQIgHE0CIBxNAiAczVIATNNgbW2N
+      alUjnc1TqVTQNO3FhUIcc5Y6wqpaieJGmuVkhhYPPFUN3N4gicG+rX5gXbc9UfbOfk/TsDdh
+      9a7a/SzX5kTZe60191P7zJjtMExj77XGdq3dya73U2u+rOVa7Pe2FoBSgdSGQSTgYbNYIRD0
+      oevbvZ6KomBrul52z5W7r1p7pXtfrmJ3TuLnL/ewapUv5nHeb63d/+NY1FpcM/4fAJpWy789
+      zisAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='House sales price' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

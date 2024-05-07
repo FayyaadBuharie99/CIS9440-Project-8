@@ -1,5 +1,5 @@
 ### Group 8 - Project 9 - Housing 
-# New York State (all counties) housing datasets 
+# New York State Housing
 
 ## Team Members
 Gabriele DAmelio Sanches
