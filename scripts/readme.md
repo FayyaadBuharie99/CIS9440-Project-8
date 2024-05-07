@@ -5,3 +5,5 @@ This folder contains the scripts for our project
 3. Code to extract data and push into our storage of choice (google cloud)
 4. Code to connect to Snowflake and store data
 5. ELT code
+6. SQL code to create tables
+7. SQL code to populate data into dimansion and fact tables
