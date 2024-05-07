@@ -87,5 +87,11 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 2. School Ranking Data - This shows a line graph of the highest school ranks in each county
 
 <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/School%20Ranks.png">
-3. Housing Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Average%20Sales.png">
-4. MIT Living Wage Data - <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Cost%20of%20Living.png">
+
+3. Housing Data - This graph shows the average sales prices for each county through through a combination of aggregated zipcode data.
+
+<img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Average%20Sales.png">
+
+4. MIT Living Wage Data - This shows the average cost of living for each county in New York State
+
+ <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Cost%20of%20Living.png">
