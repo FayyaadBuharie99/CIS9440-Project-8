@@ -97,6 +97,7 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 
 <img width="793" alt="Screenshot 2024-05-11 at 10 12 27 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/64cca142-8eeb-4d16-82c1-33dcbf21eb1e">
 
+
 5. Interactive Tableau Dashboard: https://public.tableau.com/app/profile/gabriele.sanches/viz/NYHousng-InteractiveVisuals/NYHousingDashboard#1
    (Also available in the "docs" folder for the tableau desktop file)
 
