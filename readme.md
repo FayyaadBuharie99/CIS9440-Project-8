@@ -96,3 +96,19 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 4. MIT Living Wage Data - This shows the average cost of living for each county in New York State
 
  <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Cost%20of%20Living.png">
+
+5. Interactive Tableau Dashboard: https://public.tableau.com/app/profile/gabriele.sanches/viz/NYHousng-InteractiveVisuals/NYHousingDashboard#1
+   (Also available in the "docs" folder for the tableau desktop file)
+
+- New York State Map
+    - Interactive map to find the best county and zip code that meet your requirements: 
+        - Choose average price of housing sales
+        - Choose the average school rank (1 to 5)
+        - Choose the average count of robbery 
+
+- Living Wage vs. Minimum Wage 
+    - Chart showing the NY State Minimum Wage  ($16/hour) and what is the wage necessary to be considered a living wage by state
+
+- Annual Salary by Occupation vs. Average Living Expenses by County
+    - Interactive chart that shows the average living expenses by county compared to the average annual salary by occupation (average salary by occupation by the State of NY)
+        - Select the profession title that most relates to your current or targeted job and compare the annual salary to the living expenses by state
