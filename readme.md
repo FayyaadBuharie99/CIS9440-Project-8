@@ -83,19 +83,19 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 
 1. Crime Data - We visualized the average crime rate by county to display the top five with the highest average crime rate and bottom 5 lowest crime rate by utilizing a bar graph.
 
-<img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Crime%20Rate.png">
+<img width="1205" alt="Screenshot 2024-05-11 at 10 13 23 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/fc9f9edd-5827-43bd-887c-7f3683fe106a">
 
 2. School Ranking Data - This shows a line graph of the average school ranks in each county
 
-<img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/School%20Ranks.png">
+<img width="1438" alt="Screenshot 2024-05-11 at 10 11 49 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/ecd98e96-70d5-4f47-940d-1c05fc220d85">
 
 3. Housing Data - This graph shows the average sales prices for each county through through a combination of aggregated zipcode data.
 
-<img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Average%20Sales.png">
+<img width="1375" alt="Screenshot 2024-05-11 at 10 11 16 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/f3946a9f-ea7b-4cf1-ba46-22d89dd03694">
 
 4. MIT Living Wage Data - This shows the average cost of living for each county in New York State
 
- <img width="720" alt="Screenshot 2024-04-28 at 10 04 15 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/blob/main/models/Cost%20of%20Living.png">
+<img width="793" alt="Screenshot 2024-05-11 at 10 12 27 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/64cca142-8eeb-4d16-82c1-33dcbf21eb1e">
 
 5. Interactive Tableau Dashboard: https://public.tableau.com/app/profile/gabriele.sanches/viz/NYHousng-InteractiveVisuals/NYHousingDashboard#1
    (Also available in the "docs" folder for the tableau desktop file)
