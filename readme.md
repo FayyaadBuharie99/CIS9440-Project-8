@@ -103,7 +103,7 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 - New York State Map
     - Interactive map to find the best county and zip code that meet your requirements: 
         - Choose average price of housing sales
-        - Choose the average school rank (1 to 5)
+        - Choose the average school rank
         - Choose the average count of robbery 
 
 - Living Wage vs. Minimum Wage 
