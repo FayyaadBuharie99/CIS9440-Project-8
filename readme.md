@@ -89,7 +89,7 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 
 <img width="1438" alt="Screenshot 2024-05-11 at 10 11 49 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/ecd98e96-70d5-4f47-940d-1c05fc220d85">
 
-3. Housing Data - This graph shows the average sales prices for each county through through a combination of aggregated zipcode data.
+3. Housing Data - This graph shows the average sales prices for each county through a combination of aggregated zipcode data.
 
 <img width="1375" alt="Screenshot 2024-05-11 at 10 11 16 PM" src="https://github.com/FayyaadBuharie99/CIS9440-Project-8/assets/159973139/f3946a9f-ea7b-4cf1-ba46-22d89dd03694">
 
@@ -103,7 +103,7 @@ After we cleaned all the data in Snowflake, we then used Tableau -- a visualizat
 
 - New York State Map
     - Interactive map to find the best county and zip code that meet your requirements: 
-        - Choose average price of housing sales
+        - Choose the average price of housing sales
         - Choose the average school rank
         - Choose the average count of robbery 
 
